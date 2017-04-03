@@ -1,0 +1,172 @@
+1) explain about arr.forEach and arr.map . compare the differences?
+2) object and object methods (.hasOwnProperty(item))
+3) diff ways of creating an object
+4) understand about properties in object. look into about adding property, delete a property, edit property value, check if a property exists?
+
+
+
+1).
+1.arr.forEach
+forEach executes the given function for every element in the array.
+
+syntax:
+
+arr.forEach(callback[, thisArg])
+
+parameters:
+
+callback: this call back function will execute three arguments
+they are
+1.current value: which is the current element being processed.
+2.index:  index of the current element being processed.
+3.array:  the array for which forEach() is being applied to
+4.this arg: optional function used to execute with in the function.for
+this forEach() execute the callback once for each element present in the array
+
+2.arr.map
+ map() method creates a new array with the results of calling a provided function on every element in this array.
+
+syntax:
+
+var new_array = arr.map(callback[, thisArg])
+
+parameters:
+
+ callback: this call back function will execute three arguments
+they are:
+1.curentValue:which is the current element being processed.
+2.index:  index of the current element being processed.
+3. array: the array in which map function is called on.
+4.this arg: optional function used to execute with in the function.
+
+Differences bw arr.forEach() and arr.map():
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+map() returns an array while forEach() doesnot return any array.
+forEach() performs action to each element in the original  array whereas map() performs an action to each element aswell but emitting result as a new array.
+there is no change in the original array in map().
+
+
+2).
+object and object method
+>>>>>>>>>>>>>>>>>>>>>>>>>
+ Object:
+ An object is a collection of properties.each property is associated with a name and a value. a property value can be a function.
+ we can define our own objects and their properties,functions and methods too.
+
+object methods:
+>>>>>>>>>>>>>>
+
+arr.length
+we can use length property find the length of an array
+
+.push(new value)
+syntax:
+
+arr.push("new value"); ---
+-- push will add a new value at the end of array
+
+.pop();
+syntax :
+arr.pop();
+-- remove the last item in the array.
+
+.shift()
+syntax:
+  arr.shift();
+  --shift will remove a value from the starting of the array.
+
+  .unshift
+  syntax:
+  arr.unshift();
+  ---unshift will add a new value in starting of  the array.
+
+.slice(firstIndex,lastIndex)
+syntax:
+         arr(2,7);
+         -- you are creating a new array without modifying the value of existing array.here firstIndex is the element in which the array starts and the last index is the index value.
+
+
+.splice(firstIndex, numberOfItemsToBeRemoved)
+   syntax:
+
+     arr(2,3);
+     -- you are creating a new array modify or deleting from the existing array.
+     --changes are done to existing array.
+     -- here first index is the starting element in the array whereas numberofItemsToBeRemoved is the count of elements from the firstindex.
+
+  .indexOf(value)
+  -- to find the first occurance of the value in array.
+
+  .lastIndexOf(value)
+  --- to find the last occurance of the value in the array and return the index.
+
+
+3).Different ways of Creating object:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1.
+var o = {}; //empty object.
+
+var o = {
+          property1: value,
+          property2: value,
+          property4: value,    //object with properties.
+          property5: value,
+        };
+
+properties of object:
+
+1.Accessing the property:
+we can access these properties by using:
+
+Syntax:
+objectName.propertyName
+
+2.Updating the property:
+for Updating a property value:
+
+Syntax:
+objectName.existingPropertyName : newvalue;
+
+3.Adding a new Property:
+for Adding a property value:
+
+Syntax:
+objectName.NewProperty: value;
+
+4.Deleting a Property:
+for Deleting a property
+
+Syntax:
+delete objectName.PropertyName;
+
+5.property Exists?
+to know if a property exists are not?
+
+6.
+Syntax:
+objectName.hasOwnProperty('PropertyName')
+
+7.window
+window is the global object
+all the variable declared outside a function is refer to a window.
+
+8.define property:
+to define a object property we use defineProperty
+
+syntax:
+object.defineProperty(obj,property,decsriptor);
+
+parameters:
+
+obj:
+ the object on which to define the property.
+
+ property:
+ name of the property to be defined.
+
+ descriptor:
+ decscription for the property.
+
+References:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map

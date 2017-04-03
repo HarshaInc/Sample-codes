@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<link href = "index.css" rel ="stylesheet"/>
+<body>
+
+<script >
+
+var a = ["a", "b", "c"];
+
+a.forEach( function(e)
+{
+    document.write(e);
+});
+
+var n = [2,4,16,64,144],i;
+  var r = n.map(Math.sqrt);
+for(i=0;i<n.length;i++)
+{
+document.write("<br>"+r[i]);
+}
+</script>
+<script>
+var ar = Array(4);
+ar[0] = "harsha";
+ar[1] = 20;
+ar[2] = true;
+ar[3] = 12.23;
+function displayArr()
+{
+       var n = ar.length;
+       var resultdiv = document.getElementById("resultdiv");
+            for(var i=0; i<n; i++)
+            {
+              var newdiv = document.createElement("div");
+              newdiv.innerHTML = "item" + (i+1).toString()+"&nbsp;" + "of"+"&nbsp;" + n.toString() + "&nbsp;" + "is" + "&nbsp;" + ar[i];
+               resultdiv.appendChild(newdiv);
+            }
+}
+</script>
+
+  <p>
+    <input type = "button" value = "showarray" onclick = "displayArr();"/>
+ </p>
+<div id = "resultdiv">
+</div>
+<br>
+<script id = "d1">
+var a = { } && [];
+document.write("The value of a is :");
+document.write(a+"<br>");
+
+var b = [] && 0;
+document.write("The value of b is :");
+document.write(b+"<br>");
+
+
+var c = 0 && false;
+document.write("The value of c is :");
+document.write(c+"<br>");
+
+var d = [ ] || true;
+document.write("The value of d is :");
+document.write(d+"<br>");
+
+var e = 0 || false;
+document.write("The value of e is :");
+document.write(e+"<br>");
+
+  var arr = [1,20,30,'harsha',10.6,'document',34,'gf'];
+  var arr2 = [21,true,function() {},[],'hello',10,'str',null,{},21 , 3, 4];
+ document.write('last index value of 21 is:',arr2.lastIndexOf(21)+"<br>");
+
+ document.write("The length of the arr is :");
+ document.write(arr.length+"<br>");
+
+  arr2.push("new value");
+  document.write(arr2+"<br>");
+
+  arr2.pop();
+  document.write(arr2+"<br>");
+
+  arr2.shift();
+  document.write(arr2+"<br>");
+
+  arr2.unshift();
+  document.write(arr2+"<br>");
+
+  document.write(arr2.indexOf('hello')+"<br>");
+  document.write(arr2+"<br>");
+  document.write(arr+"<br>");
+  //document.write("<br>");
+  document.write(arr.slice(2,7));
+  document.write("<br>");
+  document.write(arr.splice(2,3));
+  document.write("<br>")
+  document.write(arr2+"<br>");
+</script>
+<p>Objects</p>
+<script>
+var string = "hello";
+var d = 34.4;
+var Employee =
+{
+  name : 'harsha',
+  age : 23,
+  address: {
+  street: '3004 SW Briar Creek Ave',
+  state: 'AR',
+  }
+}
+document.write(Employee.name+"<br>");
+document.write(Employee.age+"<br>");
+document.writeln(Employee.address.street,Employee.address.state);
+
+Employee.age = 22;
+document.writeln("<br>"+Employee.age);
+
+delete Employee.age;
+document.writeln("<br>"+Employee.age);
+
+document.writeln("<br>"+Employee.hasOwnProperty('age'));
+
+document.writeln("<br>"+window.Employee);
+
+document.write("<br>"+Object.keys(Employee));
+</script>
+</body>
+</html>
