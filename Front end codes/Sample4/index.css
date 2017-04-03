@@ -1,0 +1,174 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffa500;
+}
+tr  td img
+{
+  width:300px;
+  height:300px;
+}
+.div1
+{
+  background-color: #ebdf87;
+
+}
+.div2
+{
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-bottom: 1px;
+    padding-left: 0px;
+    background-color: #ebdf87;
+}
+header
+{
+  background-color: skyblue;
+
+}
+h1{
+  text-align: center;
+  text-decoration-color: blue;
+}
+body
+{
+  background-image: url("http://bestwallpaperhd.com/wp-content/uploads/2014/07/Car-Desktop.jpg");
+  background-size: 1366px 768px;
+  background-repeat: no-repeat;
+  width:100%;
+  height:100%;
+}
+
+footer
+{
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  text-align: center;
+  background-color:#ebdf87;
+}
+ul li ul {
+    padding: 12px;
+    font-size :12px;
+    cursor:pointer;
+    display:none;
+     visibility: hidden;
+}
+
+ul li ul li {
+    background-color:#535353;
+    border-top:1px solid #fff;
+    display: block;
+    font-size:12px;
+    color:#fff;
+}
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #fff;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.nav_menu_sub {
+    padding:0;
+    margin:0;
+}
+
+.nav_menu_sub ul {
+    margin-top:-7px;
+    display: none !important;
+}
+
+.nav_menu_sub:hover ul {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+table
+{
+
+display: none;
+
+}
+
+
+.side1
+{
+
+  background-color:#e4d304;
+  border-radius: 5px;
+  text-align: center;
+  position : relative;
+  margin: 2px 29.5%;
+  width: 42%;
+
+}
+div
+{
+  padding:10px;
+  border:10px solid #FFA500;
+
+
+}
+form
+{
+  text-align: center;
+  margin:auto;
+  border-right: 2px;
+  border-left: 2px;
+  border-top:2px;
+  border-bottom: 2px;
+  border-color: black;
+  display: block;
+}
+.band
+{
+background-color: white;
+margin:auto;
+
+}
+mark
+{
+  color:green;
+}
+
+#bullet
+{
+text-align:center;
+background-color: #ebdf87;
+}
+
+#con
+{
+
+}
