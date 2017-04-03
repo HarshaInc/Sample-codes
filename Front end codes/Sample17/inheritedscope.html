@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script type="text/javascript" src="inheritedscope.js">
+
+  </script>
+</head>
+<body ng-app="app">
+<div  id="d1"  ng-controller="Add">
+
+<hr>
+value of x is {{x}} <br>
+change the value of x: <input ng-model="x"/> <br>
+value of y is {{y}} <br>
+change the value of y: <input ng-model="y"/> <br>
+
+Addition of x and y is {{x+y}}
+
+<div id="d2" ng-controller="Mul">
+value of b is {{b}} <br>
+change the value of b: <input ng-model="b"/> <br>
+value of y is {{d}} <br>
+change the value of d: <input ng-model="d"/> <br>
+
+Multiplication of b and d is {{b*d}} <br>
+<hr>
+value of x is {{x}} <br>
+
+value of y is {{y}} <br>
+Multiplication of x and d is {{x*d}} <br>
+</div>
+</div>
+</body>
+</html>

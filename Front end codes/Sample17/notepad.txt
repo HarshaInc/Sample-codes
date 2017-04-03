@@ -1,0 +1,64 @@
+1) In a directive --
+    Scope -- shared scope, isolate scope, inherited scope
+2) isolated scope       @   = &
+
+1))
+>> scope acts as a gluee between the controller and the view
+>> scope gets merged into the controller instance
+>> the controller has direct access to the scope
+>> DOM has direct access to scope.
+>> scope acts as a mediator between the controller instance and the view
+
+ $scope :
+>> Using $scope we can easily access scope of a particular controller directly inside controller instance using the built-in called $scope.
+>> we can add as many properties in the controller $scope.prperties with necessary values and all of those is available to view.
+
+>> the scope acts as a data funding elements for all those data binding and expressions
+
+
+shared scope:
+>>>>>>>>>>>>
+>> if u are having a controller with a scope and defining a custom directive with no scope then automatically uses the existing scope then this is called shared scope.
+>> in this the directives will share the same controllers scope.
+>> if the scope changes, it affects all the elements(includeing the controller).
+>> the scope modifications can be happening from the controller element or any of the child or nested elements.
+>> whenever we have a directive created inside a particular  angular element by defualt it tries to use the same scope of the parent.
+>> we can use the shared scope in the two way binding and one way binding.
+>> if the scope gets modified it modifies every where.
+
+
+>> Inheritane scope:
+>> if you are modifying any directive controller and that is actually working with scope and as long as the scope is shared with the parent controller you are actually modifying the same scope object, if the scope having the member earlier it replaces the value with the new child value or member.
+Inherited scope withrespect to controllers:
+
+>> A new scope is derived from the parent controller scope.
+>>  All the members of the parent scope are accessible from the child scope and also the child scope can have their own memebers.
+>> A child scope can override the parent members. and can still access the parent by using $parent.
+
+inheritance with respect to Diretive:
+>> we can specify scope attribute with in the custom directive to create new scope and inherit the properties of parent scope
+   scope: true
+>> if not it uses the shared scope.
+
+
+2)) Isolated scope:
+>> it is the scope which is completely independent of controller or parent scope. which has no relation with the parent scope.
+>> it is indicated as scope:{}
+>> whenever we want to access parent scope from isolated or vice versa we an do with scope parameter
+>> scope parameters are
+      >>>>>> @:
+        => whenever we want to pass a value to isolated scope we use @
+        => it is a uni diretional which we can send from a parent scope to isolated scope,
+        => we can pass string data or a value.
+
+      >>>>>> =
+         => to pass data as an object to directive scope we use =
+         => it is a two way binding when we change the object then it can be updated in isolated scope as well as the parent scope.
+
+      >>>>>> &
+         => we can access the function from a parent scope to the isolated scope
+
+ $parent : to access the  actual values of parent scope we use $parent.
+
+
+

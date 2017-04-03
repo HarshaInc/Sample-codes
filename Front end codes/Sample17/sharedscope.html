@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script type="text/javascript" src="sharedscope.js">
+
+  </script>
+</head>
+<body ng-app="app">
+<div id = "d1" ng-controller="example">
+Controller: x = {{x}}, y = {{y}} <br>
+Modify the value of x : <input ng-model="x"/><br>
+Modify the value of y : <input ng-model= "y"/> <br>
+
+<hr>
+Directive 1 : <div message>  </div> <br>
+Directive 2:  <div message>  </div> <br>
+</div>
+
+</body>
+</html>

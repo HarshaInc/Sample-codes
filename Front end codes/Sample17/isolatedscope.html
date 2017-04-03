@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8"/>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script type="text/javascript" src="isolated.js">
+
+  </script>
+</head>
+<body ng-app="app">
+<div  id="d1"  ng-controller="example">
+
+Controller: x = {{x}}, y = {{y}}, z = {{z}}, a = {{a}} <br>
+<hr>
+Directive 1 : <div message a="hello" x= "heeee">  </div> <br>
+Directive 2:  <div message a='{{a}}', x= '{{x}}'>  </div> <br>
+Directive 2: Multiply by 20  <div message a='{{a*20}}', x= '{{x*20}}'>  </div> <br> <hr>
+Directive 2: Square of the number <div message2 s='{{a*a}}', t= '{{x*x}}'>  </div> <br>
+</div>
+
+</body>
+</html>
