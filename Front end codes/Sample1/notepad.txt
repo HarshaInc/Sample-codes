@@ -1,0 +1,85 @@
+1. Doctype is a document type specified for a particular code.
+ It determines which version of code the document model is using whether it is Html or Xhtml or Xml.
+  It DOCTYPE declaration refers to Document Type Definition(DTD),
+DTD specifies the rules for markup language in which browser can render the contents specified correctly.
+
+sample code:
+
+<DOCTYPE html>  // Doctype refers to Document Type Definition and specifies current version of html
+<html>
+<title>Document Type</title>
+<body>
+<h1> Document Type Definition </h1>
+</body>
+</html>
+
+2.Semantic elements:
+    The elements which clearly defines its contents are semantic elements.Even though we have non-semantic elements we use semantic elements for proper structuring
+   and understanding of the layout and also for easy to readability.
+   <header>,<footer>,<main>,<nav>,<section>,<article>,<aside>,<details>,<summary>,<figcaption>,<figure>,<mark>,
+   <time>,<form>,<table>
+
+    <header>
+    it contains a group of introductory or navigational aids.a web page header typically contains site logo,site navigation and heading elements.
+
+    <footer>
+    web page footer typically contains authorship,contact information,site map, copyright information.
+
+    <main>
+    it is a high level element that contains all the content that is unique to a single web page.the main content that is directly related to the web page and not repeated across multiple web pages.
+
+    <nav>
+    represents a section of page that links to other pages or parts within in the page.it contains navigation links,this element can be placed in header, footer and on aside element also.
+
+    <section>
+    it is  a generic section of a document that represent a group of related content.it is a blog of contents that u could store as an individual record in a database.to mark off sections of a document such as chapters or major sections.
+
+    <article>
+    it is a piece of self contained content.basically to represent Forun post, blog post , new story, user comments.
+
+    <aside>
+    it can be used to mark up content which is relevent to your page as a whole.it represents a section of a page that consists of content that is tangentially related to the content around the aside element.
+
+    <details>
+    it is used as a disclosure widget from user from retrieving additional information.to wrap all contents we use details.
+
+    <summary>
+    to specify the summary and title of a section.
+    it is a visible heading for details.
+
+
+    <figcaption>
+    it defines a caption or legend for a given figure.
+
+    <figure>
+    it represents self contained content frequently a picture or a diagram or acode snippet or a schema.
+
+    <mark>
+    to highlight part of a text content for reference purpose
+
+    <time>
+    defines time on 24 hours.
+
+    <form>
+    it represents a document section that contains interactive controls to submit information to a web server.
+
+
+    <table>
+    it defines an html  table with different attributes in it.
+    it contains <tr>table row, <td>table data, <th>table head.
+    it also contains other attributes like <thead> table heading, <tbody>table body.
+
+3.Need for semantic elements?
+Semantic elements render look and feel structure of the page.
+Using semantic elements the accessability of code increases and also maintaining the web page is easy,we can easily redesign the page.the download speeds also vary .
+
+Disadvantage of semantic elements:
+Not all browsers support these elements.
+
+
+
+References:
+http://www.w3schools.com/
+http://html5doctor.com/
+http://blog.teamtreehouse.com/
+https://developer.mozilla.org
