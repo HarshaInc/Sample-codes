@@ -1,0 +1,72 @@
+
+
+in other programming (c, c++, java, .net)
+logical and
+-- it would return true if both values are true 
+else return false
+
+logical or
+--it would return true if either one of them is true else return false
+
+
+
+
+
+
+ home work 3
+1) write explanation following logical operators and what will it return
+--> {} && false
+--> {} || true
+--> undefined || NaN
+--> "0" || true
+--> " " || true
+--> -Infinity && true
+2) typeof operator in javascript? examples on how you use it?
+typeof operator returns the datatype of a particular object or variable.
+
+Type	Result
+Undefined ==>	"undefined"
+Null	==>   "object" 
+Boolean	==>  "boolean"
+Number	===>   "number"
+String  ===>	"string"
+Function object ====>	"function"
+Any other object  ===>	"object"
+
+Examples:
+==========
+
+typeof 37 === 'number';
+typeof 3.14 === 'number';
+typeof(42) === 'number';
+typeof Math.LN2 === 'number';
+typeof Infinity === 'number';
+typeof NaN === 'number'; // Despite being "Not-A-Number"
+typeof Number(1) === 'number'; // but never use this form!
+
+
+// Strings
+typeof '' === 'string';
+typeof "bla" === 'string';
+typeof (typeof 1) === 'string'; // typeof always returns a string
+typeof String('abc') === 'string'; 
+
+
+// Booleans
+typeof true === 'boolean';
+typeof false === 'boolean';
+typeof Boolean(true) === 'boolean';
+
+
+// Symbols
+typeof Symbol() === 'symbol'
+typeof Symbol('foo') === 'symbol'
+typeof Symbol.iterator === 'symbol'
+
+
+
+3) add two variables -- both strings and numbers --> if you substract two variables -- what is the type of result --> if you multiply two variables -- what is the type of result --> if you divide two variables -- what is the type of result
+ 4) operator precedence --> what is this operator precendece? solve following examples --> '1' + 2 + 3 
+ --> '1' + '2' * '3' 
+
+How to search for answers in google --> search with keywords --> look into atleast 5 references where you might find relevant information --> read from atleast 5 sources --> consolidate the information from 5 sources write in the homework
