@@ -1,0 +1,117 @@
+1) http status codes in restful web services
+  200, 201, 202,
+  3xx
+  400, 401, 403, 404
+  500, 501, 502, 503, .....
+2) Angular JS --> MVC, MVVM (Data binding)
+
+
+1))
+
+HTTP status codes:
+2XX  codes are for success
+200: OK
+The request is succeeded this http status code is for success.
+
+201: Created
+The request has been fulfilled and the resulted in a new resource being created.
+
+202: Accepted
+The request has been accepted for processing but the processing has not benn completed.
+
+3XX codes for Redirections these status codes indicates that further actions needs to taken by user agent in order to fulfill the request.
+
+300: Multiple choice
+the requested resources corresponds to any one of a set of representations, each with its own specific location
+
+301: Moved Permanently
+The requested resources has been assigned a new permanent URI and any future references to this resources should use on e of the returned URI's.
+
+4XX status codes are client errors
+400: Bad Request:
+The requested could not be understood by the server due to malformed syntax.
+
+401:Unauthorized
+The request requires user authentication
+
+402:Payment required
+this code is reserved for future use.
+
+403:Forbidden
+The server can understand the request but refused to fulfill it, authorization will not help and the request should not be repeated.
+
+404:Not Found
+the server has not found anything matching the request URI and no indication is given of whether the condition is temporary or permanent.
+
+5XX status codes are Server errors
+
+500: Internal Server Error
+The server encountered an unexpected condition which prevented it from fulfilling the request.
+
+501:Not Implemented
+The server does not support the functionality required to fulfill the request.this is the appropriate response when the server does not reognize the request method and is not capable of supporting it for any resources.
+
+502:Bad Gateway
+The server,while acting as a gateway or proxy received an invalid response from the upstream server it accessed in attempting to fulfill the request.
+
+503:Service Unavailable
+The server is currently unable to handle the request due to a temporary overloading or maintainence of the server.
+
+
+
+
+2)) Angular Js
+
+  Angular Js is avery powerful JavaScript Framework, it is used in a single page web application projects,
+  >> it extends HTML DOM elements with additional attributes to make it more responsive to the user actions.
+
+
+  MVC Architecture :
+  Model View Controller is popularly called as MVC architecture is a software design pattern for developing web applications.
+
+  Model - is a bottom level of the pattern which is responsible for maintaining data.
+  View - is responsible for displaying all or a portion of the data to the user.
+  Controller - is a software code that controls the interaction between the Model and the View.
+
+MVC is most popular because it isolates the application logic from the user interfaec layer and supports separation of concerns
+here the controller receives all the requests and then works with the model and displays the data in with the help of view.
+
+
+In AngularJs we use three important elements they are:
+
+ng-app - this directive defines and links an angularJs application to HTML
+
+ng-model - this directive binds the values of AngularJS application data to HTML input controls.
+
+ng-bind- this directive binds the AngularJs application data to HTML tags.
+
+>>AngularJs is a client side JS framework
+>>it is developed and maintained by google
+>> to separate DOM manipulations from application logic we use Angular Js
+>> separation of concerns (using MVC like pattern)
+Models contain data, views contain DOM html contents, Controller works with web services
+>> Make Single page web application very easier.working on the same page like master page and use DOM elements and manipulate the data and get the data within the same page
+>> we can create different modules in angular Js using
+
+angular.module("example",[]);
+
+here we are creating an angular module with a name example
+ In Angular module all the application logic comes under one umberella
+ and if a second parameter is provided ( [] ) then we are creating a new module.
+ if second parameter is not provided we are accessing existing module.
+ here empty [] implies that the module has no dependencies.
+
+Defining the angular attribute:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ng-app = "example"
+
+here ng is the shortcut for angular application code
+an Angular application really works with the module so we are defining the angular app with the module name example and it is the root module.
+
+basically we have only one angular appliaction for one page but we can have multiple  angular application attribute with the modules
+
+we cannot next the Angular application attribute can never be nested,
+ we use different angular expression using simple snippets
+ {{}}  it is a simple javascript expressions.
+
