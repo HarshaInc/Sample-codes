@@ -1,0 +1,59 @@
+1) Research more about event delegation.
+2) what is jQuery
+3) why do we use jquery
+4) $(document).ready vs window.onload?
+5) what is $?
+
+
+1))
+ Event delegations:
+>> Event delegation is a process of using event propagation(Event Bubbling) to handle events at a higher level in the DOM than the elements on which the event originated.
+>> it allows us to attach a single event listener for elements that exists now or in future.
+
+>> Event delegation allows you to avoid adding event listeners to a specific nodes(elements), instead the event listener is added to one parent that event listenerr analyzes bubbled events to find a match on child elements.
+
+2)) JQuery:
+ JQuery is a fast and concise javascript library.
+ >> it is a write less  and do more kind of scripting language
+>> JQuery minimizes event handling, animations, ajax interactions for rapid web development.
+
+
+3)) we use JQuery because it is usefull for
+    1) DOM manipulations
+    >> with concise code we can easily modify the DOM elements using JQUERY.
+
+    2) Event HAndling:
+    >> Event delegations, Event Bubbling, event capturing can be easily implemented using JQUERY.
+
+    3) AJAX support:
+    >> we can develop a responsive and feature- rich website by calling AJAX technologies.
+
+    4) lightWeight:
+     JQUERY is very light weight library we can use it locally by downloading a 19 kb size minified code  and including in the html file or we cn use the cdn based version
+
+4))
+  $(document).ready vs window.onload:
+
+ >> the ready event occurs after the html document has been loaded while the onload event occurs later when all contents also has been loaded
+>> onload event is a standard event in DOM whereas ready event is specific for JQuery .
+>> the main function of the ready event is that it should occurs as early as possible after document has loaded so that when code that adds functionality to the elements in the page doesnot have to wait for all the contents to load.
+>>
+ window.onload = function()
+          {
+          // code supposed to run once DOM is loaded alert("onload event is fired");
+          };
+
+>>
+ $(document).ready(
+            function()
+                    {
+               alert("Inside jQuery ready method");
+                    });
+
+
+5)) what is $:
+
+>> it is a syntactic sugar, it is not specific t othe JQuery other libraries of javascript also use $ symbol.
+>> we use $ as an identifier in defining the name of any variable, literals in many languages similarly usage of $ is a ECMAScript specification that it is a character that is allowed to be contained in a variable identifier name.
+>> generally $ is used to define or access the jquery code
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<div class = "books">
+   <ul id = "books">
+   <li><a id ="book1" href = "#">JavaScript </a>
+   <li><a id ="book2" href = "#">JQuery </a></li>
+   <li><a id ="book3" href = "#">AngularJs </a></li>
+   <li><a id ="book4" href = "#">NodeJs </a></li>
+   <li><a id ="book5" href = "#">Java</a></li>
+   <li><a id ="book6" href = "#">HTML </a></li>
+   </ul>
+</div>
+<script>
+
+     var books = document.querySelector('#books');
+     books.addEventListener('click',function(e)
+     {
+        if(e.target)
+          {
+              document.write(e.target.innerText, ' is clicked using event delegation');
+          }
+     },false);
+</script>
+</body>
+</html>
