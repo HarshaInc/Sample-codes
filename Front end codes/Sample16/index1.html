@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>$scope Implementation with more than one controller</title>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+<script type="text/javascript">
+
+   var app = angular.module("example", []);
+    app.controller("student",function($scope)
+    {
+      $scope.Name ="harsha";
+      $scope.Age = 23;
+      $scope.Country = "India";
+      $scope.College ="University of Central Missouri";
+      $scope.SemFee = "1200";
+      //to get semfee from console we use angular.element($0).scope().semFee
+      // we can also change the value in console by angular.element($0).scope().semmFee = "7000"
+      // to change the value in the DOM element we use  angular.element($0).scope().$digest()
+
+      $scope.AnnualFee = function()
+      {
+        return (this.SemFee)*12;
+      }
+    });
+    app.controller("Employee",["$scope",function(e)
+    {
+      e.Name = "vardhan";
+      e.Salary = "5400";
+      e.AnnualSal = function()
+      {
+        return (this.Salary)*12;
+      }
+    }]);
+</script>
+
+</head>
+
+<body ng-app = "example" ng-controller="student as s">
+<div>
+ Hi This is {{Name}}!!
+<br>
+I am {{Age}} years old.<br>
+I am from {{Country}}<br>
+I completed my graduation in {{College}}
+I am paying {{SemFee}} per Semester.
+Totally I am paying {{AnnualFee()}} per year.
+</div>
+<div ng-controller="Employee">
+Hello {{Name}},
+looks like your Salary is {{Salary}}  and your annual salary is {{AnnualSal()}}
+</div>
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+1) One time data binding & two way data binding
+2) ng-init, ng-model, ng-app, ng-bind
+3) {{}}  angular expressions
+4) $scope in angular js
+5) can we define mutliple controllers within an application.
+6) ng-click, .. events in angular js?
+
+1))
+
+Angular Js engine internally has html compiler
+inorder to find check the syntax of the template
+Angular Js works with the template and produces output to the view
+
+processing of template
+>> compiles template for errors
+>> load template in memory
+>> transforms template data
+   >> data binding
+   >> evaluation of expression
+after all these browser executes the dom tree(view)
+
+controllers:
+>>>>>>>>>>>>>>>
+controllers are javascript objects
+>> controllers are responsible to send and receive data between views and application logic
+>> controller usually attached to DOM element using ng-controller attribute
+ng-app,ng-controllers are directive
+every controllers are must be instantiated
+controllers are classes in angular js
+it has members and it is to be instantiated
+
+
+here controller will be able to send data from controller to the view this is one way data binding
+
+
+
+                 module
+                 |               MOdel
+                  == controller1 <=====|
+                  == controller2       |
+                  .                    |
+                  .                    |
+                  .                    | data
+                  .
+                                      Markup
+                                      |
+                                      ==view1
+                                      == view2
+                                      .
+                                      .
+                                      .
+
+
+ generally we create a module using
+     angular.module("example",[]);
+
+     <div ng-controller='student'>
+
+     it actually creates a memory area for a controller in module.with some boundary or context
+     it can hold data,(json,or other format) it is logical context
+     div can have direct access to this context and this is the scope
+
+      </div>
+
+>> here div is the view and context is the model and controller has to update the model in order to update the element div.
+
+>> scope acts as a gluee between the controller and the view
+>> scope gets merged into the controller instance
+>> the controller has direct access to the scope
+>> DOM has direct access to scope.
+>> scope acts as a mediator between the controller instance and the view
+
+
+Data Binding
+>>>>>>>>>>>>
+
+>> to establish connection between the UI andd the business logic and data/model
+
+>> Synchronizing the data with the UI and model
+>> in angular Js data binding is a connection between the view/markup and controller/scope.
+
+>>In one way data binding
+
+                       data flows
+    view/markup   <<<=========<<========<= controller/scope
+
+   >> data flows from Scope to view
+   >>  In scope data
+           >> gets propagated to view
+           >> data Modifications: propagated immediately and reflected in view
+
+   >> In view data
+          >> No propagation exists for any data change
+          >> usually performed through ng-bind or evaluation expressions.
+
+>>> In two way data binding
+
+                 data flows both sides
+    view/markup <<==>>=====<<====>>===  controller/scope
+
+>> data flows from the scope to view and view to scope aswell
+
+   >>  In scope data
+       >> Gets propagated to view
+       >> data Modifications: propagated immediately and reflected in view
+
+   >>  In View Data
+       >> Gets propagated to scope
+       >> Data Modifications: propagated immediately and reflected in scope
+       >> usually performed through "ng-model"
+
+
+ >>>> In One time data binding
+
+
+            only one time data flows
+    view/Markup <<================= controller/scope
+
+>>>only for first time the data from the scope is send to the view and if any modification done again in the scope is not transfered to the view.
+
+    >> data flows from the scope to view
+
+    >> In scope data
+      >> Gets propagated to view(only once for the first time)
+      >> Data Modifications: No propagations
+
+     >> In view data
+        >> No propagation happens (back to scope) for any data change
+        >> usually performed through "::" evaluation expression.
+
+
+
+2))
+ ng-init
+   >> ng-init directive is used to initialize the AngularJS application.
+   >> ng-init directive initializes appliaction data.
+
+
+ng-model
+  >> when a user types any info in this that will automatically reflect in the scope.
+  >> by using ng-model  directive we can receive values from the scope to the view.
+  >> if u modify the value this get automatically modified in the view( inside it is modifying the scope and it reflects every where in the view)
+  >> for two way data binding we use ng-model.
+
+ng-app
+>>we need to have atleast one angular app in the angularjs code, to define an angular application we use ng-app
+>> using ng-app directive we can can create angular application, ng-app is the root element.
+>> we can only have one ng-app directive in our html document.
+
+ng-bind
+    >> ng-bind really works with trys to work with read only elements span div p h1,h2,h3 italic strong bold underline
+    >> if we use ng-bind we can only get from scope to the view.
+    >> for one way data binding we use ng-bind
+       can work properly
+     >> it doesnot work with input kind of elements like text, checkboxes, radio buttons so on
+     >> it works with non input elements only.
+
+
+
+
+
+3)) {{name}} --
+ >>it is an agular expression whenever AngularJS finds an expression which needs to be evaluated that particular expression will be evaluated based on the current scope.
+ >> if any variable value is not available within the scope angularJs will not return any error simply it skips the variable
+>> the scope acts as a data funding elements for all those data binding and expressions
+
+
+
+4))   $scope :
+>> Using $scope we can easily access scope of a particular controller directly inside controller instance using the built-in called $scope.
+>> we can add as many properties in the controller $scope.prperties with necessary values and all of those is available to view.
+
+>> the scope acts as a data funding elements for all those data binding and expressions
+
+
+
+5) yes, we can define multiple controllers within an application.
+
+6)) ng-click:
+ng-click is an automatic click implementation of angular Js
+it is an angular event that is used to perform action when an element is clicked
+>> in angular js  ng-click increases the count of the variable by one each time when you clicked the ng-click button or element.
