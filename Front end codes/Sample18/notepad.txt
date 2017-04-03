@@ -1,0 +1,32 @@
+1) Please practice all the filters and explain them by an example.
+2) create a custom filter for reversing a string.
+3) explain with an example about ng-repeat and ng-options. also look into diff between ng-repeat and ng-options.
+
+
+1)) Filter
+>> In angular JS Filters are mainly used to format the data, transform the data and search the data
+>> Filters can be used in templates that is views, controllers and also services
+>> we have two types of filters they are built-in filters (number,date,filter,uppercase,loweracase, orderBy)and custom filters
+
+2)) we can reverse a string using custom filter
+
+              countryApp.filter("reverse", function() {
+                    return function(input) {
+                    var result = "";
+                    input = input || "";
+                    for (var i=0; i<input.length; i++) {
+                    result = input.charAt(i) + result;
+                    }
+                    return result;
+                    };
+                    });
+
+      <input type="text" ng-model="text" placeholder="Enter your input"/>
+        <p>Input Value : {{ text }}</p>
+        <p>Filtered Value : {{ text | reverse }}</p>
+
+
+3)) differene between ng-option and ng-repeat
+>> ngOptions provides an iterator facility for the element which should be used instead of ngRepeat when you want the select model to be bound to a non-string value. This is because an option element can only be bound to string values at present.
+
+>> The ngOptions attribute can be used to dynamically generate a list of <option> elements for the <select> element using the array or object obtained by evaluating the ngOptions comprehension expression

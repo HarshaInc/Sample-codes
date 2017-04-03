@@ -1,0 +1,42 @@
+[
+  {
+    "empno": "12302",
+    "name": "Harsha Palvayi",
+    "salary": "89000"
+  },
+  {
+    "empno": "16372",
+    "name": "Sridher Kumar",
+    "salary": "88000"
+  },
+  {
+    "empno": "15432",
+    "name": "Gopi Krishna",
+    "salary": "82000"
+  },
+  {
+    "empno": "10368",
+    "name": "Gagan",
+    "salary": "84600"
+  },
+  {
+   "empno": "12345",
+    "name": "Vinod Methuku",
+    "salary": "84500"
+  },
+  {
+    "empno": "12785",
+    "name": "Satish Kumar",
+    "salary": "84500"
+  },
+  {
+   "empno": "12985",
+    "name": "Sarath chandra",
+    "salary": "94500"
+  },
+  {
+   "empno": "12675",
+    "name": "Vikranth Methuku",
+    "salary": "87000"
+  }
+]

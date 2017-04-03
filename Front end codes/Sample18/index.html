@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html ng-app="countryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Filters</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+      var countryApp = angular.module('countryApp', []);
+      countryApp.controller('CountryCtrl', function ($scope, $http){
+
+        $http.get('countries.json').success(function(data) {
+          $scope.countries = data;
+        });
+      });
+
+      countryApp.controller('Employee', function ($scope, $http){
+
+        $http.get('employees.json').success(function(data) {
+          $scope.employees = data;
+        });
+      });
+    </script>
+   <script type="text/javascript">
+
+      countryApp.filter("reverse", function() {
+                    return function(input) {
+                    var result = "";
+                    input = input || "";
+                    for (var i=0; i<input.length; i++) {
+                    result = input.charAt(i) + result;
+                    }
+                    return result;
+                    };
+                    });
+   </script>
+  </head>
+  <body>
+  <div ng-controller="CountryCtrl">
+    <h2>population in Different Countries</h2>
+    <label>Search: <input ng-model="searchText"></label>
+    <table >
+      <tr style="text-align: left;">
+        <th style="width: 133px;">Code</th>
+        <th>Country</th>
+        <th>Population</th>
+      </tr>
+     <tr ng-repeat="country in countries | orderBy: 'code' | filter:searchText">
+        <td>{{country.code}}</td>
+        <td>{{country.name}}</td>
+        <td>{{country.population}}</td>
+      </tr>
+    </table>
+    </div>
+    <hr><hr>
+    <div ng-controller="Employee">
+     <h2>Employees working in companies with different salaries</h2>
+ <label>Search: <input ng-model="searchText.$"></label>
+    <table><br>
+     <label>Name only <input ng-model="searchText.name"></label><br>
+     <tr style="text-align: left;">
+        <th style="width: 133px;">empno </th>
+        <th style="width: 133px;">name</th>
+        <th>salary</th>
+      </tr>
+  <tr ng-repeat="employee in employees | uppercase: 'name' | filter:searchText">
+    <td> {{employee.empno}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.salary | currency:"$":2 }}</td>
+  </tr>
+</table>
+</div>
+<hr>
+<hr>
+<div>
+<input type="text" ng-model="text" placeholder="Enter your input"/>
+<p>Input Value : {{ text }}</p>
+<p>Filtered Value : {{ text | reverse }}</p>
+</div>
+  </body>
+</html>
