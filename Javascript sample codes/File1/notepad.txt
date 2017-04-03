@@ -1,0 +1,175 @@
+1) convert binary number to decimal
+-- (10101010), (100), (101)
+
+>> In order to convert binary to decimal format we need to multiply each binary digit with power of 2 
+a)
+(10101010) =                     0*2^0 + 1*2^1 + 0*2^2 + 1*2^3 + 0*2^4 + 1*2^5 + 0*2^6 + 1*2^7
+
+= 0 + 2 + 0 + 8 + 0 + 32 + 0 + 128
+= 170
+
+b) 
+(100) = 
+0*2^0 + 0*2^1 + 1*2^2
+= 0 + 0 + 4
+= 4
+
+c) 
+(101) =
+1*2^0 + 0*2^1 + 1*2^2
+= 1 + 0 + 4
+= 5
+
+
+2) convert decimal number in to binary number 
+-- 101, 131, 7, 1035
+>> In order to convert decimal number to binary number we need to divide the number with base 2
+
+a) 101 
+        _2|_101__|
+        _2|__50__|_1
+        _2|__25__|_0
+        _2|__12__|_1
+        _2|__06__|_0
+        _2|__03__|_0
+        _2|__01__|_1
+        __|__00__|_1
+
+ the binary value for 101 is 01100101
+
+ b) 131
+        _2|_131__|
+        _2|__65__|_1
+        _2|__32__|_1
+        _2|__16__|_0
+        _2|__08__|_0
+        _2|__04__|_0
+        _2|__02__|_0
+        _2|__01__|_0
+        __|__00__|_1
+
+ the binary value for 131 is
+ 10000011       
+
+c)  7 
+        _2|_07_|
+        _2|_03_|_1
+        _2|_01_|_1
+        __|_00_|_1
+        
+ the binary value for 7 is 111
+
+ d) 1035
+
+        _2|_1035_|
+        _2|__517_|_1
+        _2|__258_|_1
+        _2|__129_|_0
+        _2|__64__|_1
+        _2|__32__|_0
+        _2|__16__|_0
+        _2|__08__|_0
+        _2|__04__|_0
+        _2|__02__|_0
+        _2|__01__|_0
+       
+
+ the binary value for 101 is 10000001011
+        
+3) convert characters to ASCII code
+'Hello' --> ASCII character code
+--> "Hello Every one how are you doing today?"
+
+a) 'Hello' 
+
+ASCII codes
+' --> 039
+H --> 072
+e --> 101
+l --> 108
+0 --> 049
+
+'Hello' --> 
+039 072 101 108 108 049 039
+
+b)
+
+ASCII codes
+" --> 034
+E --> 069
+v --> 118
+r --> 114
+y --> 121
+o --> 111
+n --> 110
+h --> 104
+w --> 119
+a --> 097
+u --> 117
+d --> 100
+i --> 105
+g --> 103
+t --> 116
+? --> 063
+
+"Hello Every one how are you doing today?"
+
+034 072 101 108 108 111 032 069 118 101 114 121 032 111 110 101 032 104 111 119 032 097 114 101 032 121 111 117 032 100 111 105 110 103 032 116 111 100 097 121 063 034
+
+4) ASCII to decimal 
+--74,65,86,66 ---> string
+
+74 --> J
+65 --> A
+86 --> V
+65 --> A
+
+5) key value pairs and do we use them in Javascript?
+
+>> Key-value pair is a set of two linked data items 
+>> Key is used to uniquely identify the item in the set of data
+>> value is either the data that is used to identify or a pointer to the location of the data 
+
+>> the key value pair is usually used to lookup tables, hash tables and configure files.
+
+>> we can use key-value pairs in javascript to add properties to an object 
+
+ var obj = { 
+           key1: value1,
+           key2: value2
+           };
+
+
+
+6) Research about javascript data types?
+
+Datatypes in javascript
+
+there are two types of datatypes
+1) primitive Datatype
+2) Non primitive Datatype
+
+1) Primitive datatype:
+
+		String 
+              var firstName = "harsha";
+		Number
+		      var length = 10;
+		Boolean
+              var y = true;
+		Undefined
+		      var t;
+	        	t is undefined 
+		Null
+		 we can empty an object by making it as null 
+
+		 var obj = null;
+
+2) Non Primitive datatype:
+
+		Object 
+              var s = {fisrtName: "harsha", lastName = "vardhan"};
+
+		Array
+		      var car = ["Bmw","Chevi","Honda","Mercedes"];
+		RegularExpression 
