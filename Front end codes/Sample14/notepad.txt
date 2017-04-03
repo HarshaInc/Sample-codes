@@ -1,0 +1,67 @@
+Please open your chrome plugin --> advanced rest client on chrome.
+
+http://rest.learncode.academy/api/johnbob/friends/
+
+http methods (get, post, put, and delete)
+
+research about how --> get, post, put and delete methods can be used
+
+example usage is given --> http://rest.learncode.academy/
+
+what is ajax?
+$.ajax --> how to use?
+
+
+http methods:
+
+GET:
+>>>>
+>> Get method is used to request data from a specific resource
+>> GET request scan be cached
+>> GET request remain in the browser history
+>> GET request can be bookmarked
+>> GET request should never be used when dealing with sensitive data
+>> GET request has length restrictions
+>> GET requests should be used only to retreive data
+
+POST:
+>>>>>
+>> POST submits data to be processed to a specific resources
+>> POST request sare never cached
+>> POST requests do not remain in the browser history
+>> POST request cannot be bookmarked
+>> POST requests have no restrictions on data length
+
+
+PUT:
+>>>>>
+>> PUT uploads a representation of specified URI
+>> PUT is idempotent so if you PUT an object twice it has no effect
+>> you can update or create a resources with PUT using same object URI
+
+
+DELETE:
+>>>>>>>
+>> DELETE is used to delete a specific resources from the data base.
+
+
+PATCH:
+>>>>>>>>
+>> PATCH can be used to update partial resources
+>> PATCH is neither safe nor idempotent
+
+
+
+
+AJAX:
+>>>>>
+AJAX - is a Asynchronous JavaScript and Xml,
+>> AJAX is a clien t-side script that communicates to and from a server or database without the need for a postback or a complete page refresh
+>> AJAX is a technique for creating  better , faster and more interative web applications with the help of XMl,HTML,CSS,javaScript
+
+
+We can use AJAX calls in
+>> Google MAps
+>> Google suggestions
+>> Gmail
+>> Yahoo Maps
