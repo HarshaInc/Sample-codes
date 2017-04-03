@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="index.css" rel="stylesheet"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<h1>CAR RENTALS</h1>
+
+<ul>
+      <li><a href="C:\Users\harsha palvayi\Desktop\UIhomework\homework4\Home.html">Home</a></li>
+
+   <li data-role='dropdown'>
+         <a href="#">Rent a Car ￬</a>
+      <ul>
+         <li>
+            <a href="#" onclick="f1()"> Used Cars</a>
+        </li>
+            <li>
+               <a href="#" onclick="f2()"> New Cars</a>
+           </li>
+      </ul>
+      </li>
+    <li data-role='dropdown'>
+         <a href="#">Buy a Car￬</a>
+          <ul>
+             <li>
+                 <a href="#" onclick="f1()"> Used Cars</a>
+             </li>
+                 <li>
+                    <a href="#" onclick="f2()"> New Cars</a>
+                </li>
+          </ul>
+      </li>
+   <li>
+      <a href="C:\Users\harsha palvayi\Desktop\UIhomework\homework4\Login.html">Sign In ￬</a>
+    </li>
+    <li data-role='dropdown'>
+      <a href="C:\Users\harsha palvayi\Desktop\UIhomework\homework4\About.html">About ￬</a>
+      <ul>
+      <li>
+                <a href='#'>
+                  Who We Are
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  What We Do
+                </a>
+              </li>
+      </ul>
+    </li>
+    <li><a href="C:\Users\harsha palvayi\Desktop\UIhomework\homework4\Contact.html">Contact</a></li>
+  </ul>
+<table id ="t1">
+  <tr>
+     <td>
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--GvopmuWt--/c_fit,fl_progressive,q_80,w_636/17qvdhb78hhrnjpg.jpg"/></td>
+     <td>
+        <img src="http://nswdg.org/wp-content/uploads/2014/07/used-cars.jpg"/></td>
+     <td>
+        <img src="https://usedcarsunder.files.wordpress.com/2011/09/1.jpeg"/></td>
+     <td>
+        <img src="http://www.cfucars.com/themes/big_blue_button_anim/images/slides/car3.jpg"/></td>
+ </tr>
+  <tr>
+     <td>
+        <img src="http://icarsunder20000.com/wp-content/uploads/2015/01/2005-Toyota-RAV4.jpg"/></td>
+     <td>
+        <img src="http://img.autobytel.com/2010/mazda/mazda3/2-800-oemexteriorfront-51653.jpg"/></td>
+     <td>
+        <img src="http://listtoday.org/wallpaper/2015/11/most-reliable-used-cars-38-cool-wallpaper.jpg"/></td>
+     <td>
+        <img src="http://dw745fgl22f1q.cloudfront.net/images/diwali/result-car-photo.png"/></td>
+ </tr>
+</table>
+
+<table id="t2">
+  <tr>
+     <td>
+        <img src="https://static.pexels.com/photos/24353/pexels-photo.jpg"/></td>
+     <td>
+        <img src="https://pixabay.com/static/uploads/photo/2012/05/29/00/43/car-49278_960_720.jpg"/></td>
+     <td>
+        <img src="http://www.hdcarwallpapers.com/walls/renault_alpine_a110_50_concept-wide.jpg"/></td>
+     <td>
+        <img src="https://pixabay.com/static/uploads/photo/2013/07/12/13/21/sports-car-146873_960_720.png"/></td>
+ </tr>
+  <tr>
+     <td>
+        <img src="http://static2.consumerreportscdn.org/content/dam/cro/cars/sports/buying_lg_sports_cars.jpg"/></td>
+     <td>
+        <img src="http://www.desibucket.com/wp-content/uploads/2016/05/Car-with-orange-Wheels-car12325.jpg"/></td>
+     <td>
+        <img src="http://bestsikander.altervista.org/immagini/wallpapers/motors/32.jpg"/></td>
+     <td>
+        <img src="http://bestwallpaperhd.com/wp-content/uploads/2014/07/Car-Desktop.jpg"/></td>
+    </tr>
+</table>
+ <script>
+    function f1()
+                 {
+                    document.getElementById("t1").style.display = "block";
+                    document.getElementById("t2").style.display = "none";
+                    document.getElementById("change").style.display = "none";
+
+                 }
+    function f2()
+                {
+                  document.getElementById("t2").style.display = "block";
+                  document.getElementById("t1").style.display = "none";
+                  document.getElementById("change").style.display = "none";
+
+                }
+
+</script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<div id = "change">
+<div class="div1">
+<marquee><p><mark> Today special offer!!! Book a rental car for 9.99$ </mark></p></marquee>
+</p>
+</div>
+<div class="div2">
+<section>
+<h3>Terms and Conditions</h3>
+<p>Offer applies to the base rate charge (Time and Mileage) and does not apply to applicable to taxes, fees, surcharges, refueling, drop-off, delivery, youthful driver, additional driver, pick up, or one way charges or any optional product or service (such as optional damage waiver of $30 or less per day), which are the responsibility of the Renter. Offer valid at participating neighborhood locations within the U.S. and Puerto Rico only for rentals reserved in advance. Rental must begin on or after August 19, 2016 and end on or before May 22, 2017. Offer rate of $9.99 per day applies to an Economy or Compact car rented on Friday and ending the following Monday, and includes 100 miles per day.</p>
+</section>
+</div>
+</div>
+<footer align="center">
+<p>Copyrights@HarshaInc.com Pvt.lt</p>
+</footer>
+</body>
+
+</html>
