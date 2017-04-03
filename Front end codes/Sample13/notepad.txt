@@ -1,0 +1,145 @@
+Basic Selectors in jQuery
+http://api.jquery.com/category/selectors/basic-css-selectors/
+
+attrubute based selectors in jQuery
+http://api.jquery.com/category/selectors/attribute-selectors/
+
+basic filter
+http://api.jquery.com/category/selectors/basic-filter-selectors/
+
+child filters
+http://api.jquery.com/category/selectors/child-filter-selectors/
+
+content filter
+http://api.jquery.com/category/selectors/content-filter-selector/
+
+form filters
+http://api.jquery.com/category/selectors/form-selectors/
+
+hirarechal filters
+http://api.jquery.com/category/selectors/hierarchy-selectors/
+
+
+1)) Basic selectors in JQuery:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+similar to javascript we have different selectors in jQuery
+
+* --  $("*") ==> it include all the elements.
+
+id -- $("#fname") ==> it includes the elements with id = fname.
+
+.class -- $(".cname") ==> it includes all the elements with lass = cname.
+
+.class,.class -- $(".name1,.name2") ==> it includes all the elements with class fname or cname.
+
+element -- $("p") ==> it includes all <P> elements
+
+el1,el2,el3 --- $("div,p,h1") ==> it includes all <div>,<p>,<h1> elements
+
+:first --- $("p:first")  ==> it includes first <p> elements.
+
+:last --- $("p:last") ==> it includes last <p> elements.
+
+:even -- $("tr:even") ==> it inludes all even <tr> elements.
+
+:odd --- $("tr:odd") ==> it includes all the odd <tr> eleements.
+
+:first-child --- $("p:first-child") ==> it includes all <p> elements that are the first child of their parents.
+
+:first-of-type -- $("p:first-of-type") ==> it includes a.. <p> elements that are first <p> elements of their parents.
+
+:last-child -- $("p:last-child") ==> it includes all the <p> elements that are last child of their parent.
+
+:last-of-type --- $("p:last-of-type") ==> it includes
+
+:nth-child(n) -- $("p:nth-child(2)") ==> it includes
+
+:nth-last-child(n) -- $("p:nth-of-type(n)") ==> it includes
+
+:only-child -- $("p:only-child") ==> it includes <p>
+elements that are only child of their parent.
+
+:only-of-type -- $("p:only-of-type") ==> it includes all <p> elements that are only child of its type of their parent.
+
+parent > child -- $("div > p") ==> it include all <p> elements that are direct child of <div> element.
+
+element + next -- $("div + p") ==> it includes <p> element that are next to each <div> element.
+
+element ~ siblings -- $("div~p") ==> it includes all <p> elements that are sibilingd of <div> element.
+
+parent descendent -- $("div p") ==> it include all <p> elemenrs that are descendent of <div> element
+
+:eq(index) $("ol li:eq(3)") ==> it includes the fourth element in a list
+
+:gt(no) -- $("ol li:gt(5)") ==> it includes the list elements with an index greater than 5.
+
+:lt(no) -- $("ol li:lt(5)") ==> it includes the list elements with an index less than 5.
+
+:not(selector) -- $("input :not(:empty)") ==> it includes all the input elements which are not empty.
+
+:header -- $(":header") ==> it includes all the elements <h1>, <h2>,<h3>,<h4>,<h5>,<h6>.
+
+:animated -- $(":animated") ==> it includes all animated elements
+
+:focus -- $(":focus") ==> it includes the element which is currently focused.
+
+:contains(text) -- $(":contains("hi")") ==> it includes all the elements which contains the text hi.
+
+:has(selector) -- $("div : has(p)") ==> it includes all the <div>
+
+:empty -- $(":empty") ==> it includes all the elements that are empty
+
+:parent -- $(":parent") ==> it includes all the elements that are a parent of another element
+
+:hidden -- $("p:hidden") ==> it includes all hidden <p> elements
+
+:visible -- $("table: visible") ==> it includes all the visible elements
+
+:root -- $(":root") ==> it includes the document root element.
+
+:lang(language) --$("p:lang(eng)") ==> it includes all the <p> elements with a lang attribute value starting with "eng"
+
+2))attrubute based selectors in jQuery:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[attribute] -- $("[href]") ==> it includes all the elements with a href attribute
+
+[attribute=value] --$("[href='some link']") ==> it includes all the elements with a href attribute value to some link.
+
+[attribute!=value]-- $("[href!='some link']") ==> it includes  all the elements with a href attribute value not eual to some link
+
+[attribute$=value] -- $("[href$='image link']") ==> it inludes all elements with a href attribute value ending with image link.
+
+[attribute|=value] --$("[title|='JQuery']") ==> it includes  All elements with a title attribute value equal to 'jQuery'.
+
+[attribute^=value]-- $("[title^='jQuery']")==> it includes All elements with a title attribute value starting with 'jQuery'.
+
+
+[attribute~=value]-- $("[title~='hi']") ==> it includes All elements with a title attribute value containing the word "hi".
+
+[attribute*=value]-- $("[title*='hi']") ==>it includes All elements with a title attribute value containing the word "hi"
+
+3)) form filters:
+>>>>>>>>>>>>>>>>
+
+:input--$(":input") ==> it includes All input elements
+:text -- $(":text") ==> it includes  All input elements with type="text"
+
+:password --$(":password") ==> it includes All input elements with type="password"
+
+:radio -- $(":radio") ==> it includes All input elements with type="radio"
+
+:checkbox-- $(":checkbox") ==> it includes All input elements with type="checkbox"
+
+:submit-- $(":submit") ==> it includes   All input elements with type="submit"
+:reset-- $(":reset") ==>it includes All input elements with type="reset"
+
+:button-- $(":button") ==>it includes All input elements with type="button"
+
+:image -- $(":image") ==> it includes All input elements with type="image"
+:file --$(":file") ==> it includes  All input elements with type="file"
+:enabled -- $(":enabled") ==> it includes All enabled input elements
+:disabled --$(":disabled") ==> it includes  All disabled input elements
+:selected-- $(":selected") ==> it includes  All selected input elements
+:checked -- $(":checked") ==> it includes All checked input elements
