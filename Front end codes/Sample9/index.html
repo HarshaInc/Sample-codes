@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style>
+div
+{
+  background-color: skyblue;
+  text-align: center;
+}
+body
+{
+  background-color: skyblue;
+}
+
+#index1
+{
+background-color: orange;
+text-align: center;
+}
+#index2
+{
+  background-color: green;
+  text-align: center;
+}
+#index3
+{
+  background-color:red;
+  text-align: center;
+
+}
+</style>
+<body>
+<div id = "index1">person
+</div>
+<div id = "index2">cars
+</div>
+<div id = "index3" onclick = "bnd();">bound
+</div>
+<script>
+
+var obj1 = {
+                firstName: 'harsha',
+                lastName: 'palvayi'
+            };
+
+var obj2 = {
+              firstName:'Arjun',
+              lastName:'palvayi'
+           };
+
+function greet(greetings)
+        {
+          document.writeln(greetings + ' ' + 'this' + ' '+ 'is'+ ' '+ this.firstName + ' ' + this.lastName + "<br>");
+        }
+
+document.getElementById("index1").onclick = function greet_pro()
+
+{
+
+
+  greet.call(obj1,'hi');
+ greet.call(obj2,'Hello');
+ document.body.style.backgroundColor = "#F6A95C";
+ document.body.style.textAlign = "center";
+}
+</script>
+
+<script >
+
+var obj3 = {
+                carName:"Benz",
+                mileage: 20 ,
+                miles: 20303
+           };
+
+var obj4 = {
+                carName:"Cheverlot",
+                mileage: 43,
+                miles: 40302
+          };
+
+ function car(info)
+{
+document.write(info + ' '+ 'This' + ' '+ 'is' + ' ' +this.carName + ' ' + 'it '+ ' '+ 'has' + ' ' + 'mileage'+ ' ' + this.mileage  + ' ' +  'with' + ' ' + this.miles+ ' ' + 'miles'+ '<br>');
+}
+
+document.getElementById("index2").onclick = function car_pro(){
+  car.apply(obj3,['Welcome']);
+ car.apply(obj4,['Hi']);
+  document.body.style.backgroundColor = "#58D754";
+  document.body.style.textAlign = "center";
+}
+
+ var bind1 = greet.bind(obj1,'Hello');
+ var bind2 = greet.bind(obj2,'Hi');
+ var bind3 = car.bind(obj3,'welcome');
+ var bind4 = car.bind(obj4,'Hi');
+
+ function bnd()
+ {
+bind1();
+bind2();
+bind3();
+bind4();
+document.body.style.backgroundColor = "#F05757";
+document.body.style.textAlign = "center";
+ }
+
+</script>
+</body>
+</html>

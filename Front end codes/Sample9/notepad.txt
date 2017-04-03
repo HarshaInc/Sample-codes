@@ -1,0 +1,26 @@
+1) java script call apply bind methods? how to use them? what are the use cases when we have to use them?
+
+
+bind:
+>> bind method is used when u want that function to be called later with a certain context.
+>> bind is used in events.
+>> bind returns a new function and allows us to pass in a this array with any number of arguments.
+
+
+
+call:
+>> call method is used to call the function immediately
+>> call invokes the function and allows us to pass in arguments one by one.
+
+
+apply:
+>> apply method is used to call the function immediately.
+>> apply method invokes the function and allows us to pass in arguments as an array.
+
+
+when to use:
+call and apply are interchangeable, if we want separate arguments to pass it is better to use call method.
+if we want an array of arguments to pass it is better to use apply method.
+
+if we doesnt know how many arguments to pass and when the particular event would fire then we use bind method.
+>> using bind method we can bind a variable with a function to create a new function.
