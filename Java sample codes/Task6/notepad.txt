@@ -1,0 +1,144 @@
+1) Write a program to read a File and print in console
+2) Write a program to write into a file in java
+3) Differences between Error and Exception
+4) Differences between Checked and Unchecked Exceptions
+5) try catch and finally describe?
+6) Differences between throw and throws?
+7) Write a program to created a casted exception or creating new exceptions in java?
+8) differences between throwable and Exception? when to use what?
+
+1))
+ to read a file and print in the console we can use two kinds
+  1.FileReader : to read character data from file
+
+  FileReader fr = new FileReader(filename);
+
+  2.BufferedReader: to read data from a file and print them in a console line by line.
+  BufferedReader br = new BufferedReader(reader r);
+
+
+
+
+
+2))
+ to write data into the file we use two types of writers
+   1. FileWriter: to write character data into the file character by character.
+   FileWriter fw = new FileWriter(filename);
+
+   2.BufferedWriter: to write the data to file line by line we use bufferedWriter
+  BufferedWriter bw = new BufferedWriter(writer w);
+  the BufferedWriter cannit communicate with the file directly instead it uses write object to communicate with the file.
+
+
+
+
+3))
+ Error:
+  >> Error in java are java.lang.Error type.
+  >> All Errors are unchecked type.
+  >> these are revealed at runtime but not at compile time.
+  >> we cannot recover from errors
+  >> Errors are caused by environment in which our application is running.
+ >> we have different types of errors they are AbstractMethodError,  AssertionError, ClassCircularityError, ClassFormatError, Error, ExceptionInInitializerError, IllegalAccessError, IncompatibleClassChangeError, InstantiationError, InternalError, LinkageError, NoClassDefFoundError, NoSuchFieldError, NoSuchMethodError, OutOfMemoryError, StackOverflowError, ThreadDeath, UnknownError, UnsatisfiedLinkError, UnsupportedClassVersionError, VerifyError, VirtualMachineError.
+
+  Exception:
+  >> Exceptions are java.lang.Exception type.
+  >> Exceptions include both checked and unchecked type.
+  >> checked exceptions are look after by compiler whereas unchecked exceptions are known by runtime environment.
+  >> we can handle exception by try catch blocks.
+  >> the exceptions are mainly caused by application itself.
+  >> we have different types of exceptions they are unchecked Exceptions:
+  ArthimeticException, ArrayIndexOutOfBoundsException, ArrayStoreException, ClassCastException, IllegalArgumentException, IllegalMonitorStateException, IllegalStateException, IllegalThreadStateException, IndexOutOfBoundsException, NegativeArraySizeException, NullPointerException, NumberFormatException, SecurityException, StringIndexOutOfBounds, UnsupportedOperationException.
+
+  checked Exceptions like:
+  ClassNotFoundException, CLoneNotSupportedException, IllegalAccessException, InstantiationException, InterruptedException, NoSuchFieldException, NoSuchMethodException.
+
+
+
+
+
+4))
+
+  checked Exceptions:
+  Checked Exceptions are the exceptions known during comiple time, and can be checked at compile time and are known as compile time exceptions.
+
+  these exceptions can be handled either using try catch blocks or using throws clause.
+
+ Unchecked Exceptions:
+ Unchecked exceptions can be known at runtime, they cannot be known at compile time because they occur runtime only. these are also called as runtime exceptions.
+
+ all sub classes of runtime exceptions and all sub classes of error classes are uncehcked exceptions
+
+
+
+
+
+5))
+ try catch blocks:
+to handle exceptions the risky code can be defined inside the try block and corresponding handling code can be defined in catch block.
+
+>> we can use try with multiple catch blocks
+possible combinations of try catch blocks
+try{} catch(X e){}
+try{} catch(X e){} catch(Y e){}
+try{} catch(X e){} try{} catch(Y e){}
+try{} catch(X e){} try{} catch(Y e){} catch(Z e){}
+try{ try{} catch(X e){} } catch(Y e){}
+
+finally:
+finally block is always associated with try catch to maintian cleanup code.
+try
+{
+  risky code
+}
+catch(Exception e)
+{
+  Handling code
+}
+finally
+{
+  Cleanup code
+}
+>> finally block will execute always irrespective of whether exception is raised or not raised, handled or not handled.
+>> whatever resources which opened at try catch blocks should be closed inside the finally block.
+
+possible combinations of try catch and finally blocks are
+try{} catch(X e){} finally{}
+try{} finally{}
+try{} catch(X e){} try{} finally{}
+try{ try{} finally{} } catch(X e){}
+try{} catch(X e){ try{} finally{} }
+
+
+
+
+
+
+6))
+throw
+++++++++
+throw keyword is used to handle our own created exception or userdefined exception or customized exception
+>> after throw statement we are not allowed to use any statements otherwise we get compile time error
+
+
+throws:
+++++++++
+we use throws keyword to delegate the responsibility of exception handling to the caller (it may be another method or JVM ) then the caller method is responsible to handle those exception.
+>> throws keyword is used to handle the checked Exceptions only
+>> Usage of throws keyword prevents the abnormal termination of the program
+>> we can use throws keyword for only methods and constructors but not for classes.
+>> we can use throws keyword only for throwable types and if we are trying to use for java classes then we will get compile time errors.
+
+
+
+7))
+
+ we can create our own exception using throw keyword and after the throw statement we don't write any other statement otherwise we get compile time error.
+
+
+
+8))
+
+>> Exception is a subclass of throwable class whereas throwable class is a super class of all the exception and error classes.
+
+
