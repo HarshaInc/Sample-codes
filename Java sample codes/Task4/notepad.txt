@@ -1,0 +1,145 @@
+clearly define and send examples in Encapsulation, inheritance, polymorphism, abstraction in java.
+
+Abstraction:
+>>>>>>>>>>>
+Hiding internal implementation and just highlighting the set of services we are offering is the concept of Abstraction.
+
+Advantages of Abstraction:
+++++++++++++++++++++++++++++
+>> We can acheive security because we are not highlighting our internal implementation.
+>> Without effecting outside environment,we can able to perform any type of changes in our internal system and hence enhancement will become much more easier.
+>> It imporoves easiness to use our system.
+>> It improves maintainablility of the application.
+>> By using abstract class we can implement abstraction.
+>> Abstract classes are never instantiated.
+
+Data Hiding:
+>>>>>>>>>>>>
+outside object cannot access our internal data directly or our internal data should not go out directly this oop feature is nothing but data Hiding.
+
+>> By declaring data member(variable) as private we can acheive data hiding.
+
+public class hiding
+{
+  private double balance;
+
+  public double getBalance()
+  {
+    int account-password;
+    if(account-password == "XXXXXXXX")
+    {
+    return balance;
+    }
+  }
+}
+
+Advantage of Data Hiding :
+++++++++++++++++++++++++
+>> the main advantage of data hiding is security.
+>> highly recommended to declare data members with private modifier.
+
+Encapsulation:
+>>>>>>>>>>>>>
+the process of binding data and corresponding methods into a single unit is nothing but encapsulation.
+
+class student
+{
+  data members(variables,datatypes,constants)
+      +
+
+  behaviour(methods,constructors,blocks)
+
+}
+>> if any component follows data hiding and abstraction such type of components is said to be encapsulation.
+
+Inheritance:
+>>>>>>>>>>>>>
+acquiring or inheriting parent class properties to the child class is called Inheritance.
+
+>> java class cannot extend more than one class at a time hence java wont provide supprot for  multiple inheritance in class level.
+>> Either directly or indirectly java wont provide support for multiple inheritance withrespect to classes
+>> But interface can extend any number of interfaces simultaneously with the help of implements and support multiple inheritance.
+>>in classes we can get parent class properties to child class using extends keyword.
+ex: class A
+    {
+    public void add()
+    {
+     int a = b + c;
+    }
+    public void multiply()
+    {
+     int d = b*c;
+    }
+    }
+    class B extends A
+    {
+
+    public static void main(String args[])
+    {
+      B b = new B();
+      b.add();
+      b.multiply();
+      }
+    }
+
+Polymorphism:
+>>>>>>>>>>>>
+poly means many and morphism means forms
+same thing changing into different forms is the concept of polymorphism.
+in polymorphism we have two different catageories in java
+
+static polymorphism :
+++++++++++++++++++++
+this is also called as compile time polymorphism or early binding
+we have two concepts in static polymorphism they are :
+1. overloading
+>> two methods are said to be overloaded iff both methods are having same name but different pargument types.
+>> method name must be same
+>> argument types must be different
+>> Method Signature must be different (method signature is method name + method arguments)
+>>private, static final methods can be overloaded
+>> method resolution can be always taken care by compiler based on reference type.
+ex:
+public void m1(int i){}
+public static int m1(long l){}
+public void m1(double d){}
+
+2. Method hiding
+++++++++++++++++
+>> Method hiding is same as method overriding except this features:
+>> both methods must be static
+>> method resolution csn be taken care by compiler based on reference type
+>> it is also called compile time polymorphism or early binding.
+
+Ex: class P
+     {
+      public static void m1(){}
+     }
+     class C extends P
+     {
+      public static void m1(){}
+     }
+
+Dynamic polymorphism:
+++++++++++++++++++++
+this is also called as Runtime polymorphism or late binding.
+1. overriding:
+>> method name must be same
+>> Argument type must be same including order
+>> Method signature must be same
+>> Return type must be same until 1.4v but later co-variant return type is allowed from 1.5v onwards
+>> private, static , final methods cannot be overridden
+>> scope of access modifiers cannot be reduced instead they can be increased.
+private < default < protected < public
+
+>>in method overriding, if child class methods throws any checked exception then compulsory parent class method should throw same checked exception or its parent.
+>> Method resolution always take care by JVM based on the runtime object.
+
+ex: public void m1(int i) {}
+     public void m1(int r){}
+
+References:
+http://www.studytonight.com/java/abstract-class.php
+https://www.tutorialspoint.com/java/java_encapsulation.htm
+http://www.javatpoint.com/encapsulation
+
