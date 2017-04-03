@@ -1,0 +1,57 @@
+1.what is prototype in object
+2.what is constructor? and new key word? why do we use it?
+3. instanceof in javascript
+4. this key word ?
+
+
+
+1.
+Prototype:
+>>>>>>>>>>>
+>>Every JavaScript object has a prototype. The prototype is also an object.
+
+>>All JavaScript objects inherit their properties and methods from their prototype.
+
+>>Object.prototype is the super of all prototypes.
+
+>>we can create prototype of an object using a constructor.
+
+>>we can also create a prototype of an  using this keyword
+>>we can add new property using the prototype to existing function using
+
+functionName.prototype.propertyName ="value";
+
+2.constructor:
+we can instantiate an object using constructor.
+there are two types of constructors they are :
+1. native constructor
+2.custom constructor
+
+1.native constructors are which available automatically in the runtime execution like Array and Object.
+
+2.custom constructor are which defined by the user itself and in which the properties and methods are defined by the user.
+
+new keyword:
+>>>>>>>>>>>
+new keyword is used to create an object
+
+syntax:
+new constructor[([arguments])]
+
+3. instanceof
+>>>>>>>>>>>>>>>>>>
+
+it checks whether the object is created by a given constructor
+it checks the current object and returns true if the object is of the specified object type.
+
+4.this keyword:
+
+this keyword can be used in two contexts
+1.global context
+2.function context
+
+1. Global context
+in global context it refers to the global object.
+
+2.Function context:
+In function context this refers based on the function values.

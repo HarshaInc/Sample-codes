@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+var a = 20;
+ var b = 30;
+function Person(name,no,age,a){
+  this.name = name;
+  this.no = no;
+  this.age = age;
+  this.a = a;
+}
+</script>
+<script>
+  var arr = [];
+
+document.write( arr instanceof Array);
+document.write("<br>");
+document.write( arr instanceof Object);
+
+</script>
+<script>
+
+var emp = new Person('harsha',123,23,10);
+var emp2 = new Person('Ravi',103,23,90);
+var emp3 = new Person('raghu',14);
+document.write("<br>");
+document.write(emp instanceof Person);
+document.writeln("<br>"+emp.name);
+document.writeln("<br>"+emp.a);
+document.writeln("<br>"+emp2.a);
+document.write("<br>"+this.a);
+
+Person.prototype.nationality = 'India';
+document.write("<br>");
+document.write(emp.nationality);
+document.write("<br>");
+document.write(emp3.age);
+
+</script>
+<script>
+  var myobj = {
+  firstName : 'javascript',
+   getfirstName : function()
+    {
+        return this.firstName;
+    }
+
+};
+var Name = myobj.firstName;
+document.writeln("<br>"+myobj.getfirstName());
+document.writeln("<br>"+Name);
+</script>
+
+<script>
+function Car (desc) {
+    this.desc = desc;
+    this.color = "red";
+}
+
+Car.prototype = {
+    getInfo: function() {
+      return 'A ' + this.color + ' ' + this.desc + '.';
+    }
+};
+//instantiate object using the constructor function
+var car =  Object.create(Car.prototype);
+car.color = "blue";
+car.desc = "Benz";
+document.write("<br>"+car.getInfo());
+</script>
+
+</body>
+</html>
