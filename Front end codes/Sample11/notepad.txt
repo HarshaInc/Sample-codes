@@ -1,0 +1,47 @@
+1) selector.addEventListener(eventType, handlerFunction, captureFlag)
+2) what is event propagation?
+3) what is event bubling and capturing?
+4) event.stopPropagation?
+5) event.stopImmediatePropagation?
+
+when to use the above scenario? use cases?
+
+
+
+1))
+ selector.addEventListener(eventType, handlerFunction, captureFlag)
+>> addEventListener() method attaches an event handler to a specified element.
+>> syntax:
+
+   in addEventListener we pass event, required function and useCapture as a parameter.
+ event is the type of event that a particular element to be performed.
+ function is requires to implement the functionality of the when the event is triggered
+ useCapture is optional it has boolean values true or false.
+
+
+2))
+Event propagation:
+Event propagation is a way to define the order of the elements when an event occurs.
+
+>> Event propagation depends upon how the elements are declared in which order the elements are declared does matters
+>> we have two ways of event propagations they are event bubbling and event capturing.
+
+3))
+Event bubbling:
+in event bubbling the inner most elements events are handled first and then outter most element events are handled.
+
+Event Capturing:
+In event capturing the outter most element events are handled first and then the inner most element events are handled.
+
+we can perform any one of the event propagation using addEventListener.
+
+addEventListener(event,fucntion, useCapture);
+
+4))
+event.stopPropagation:
+the stopPropagation event stops from bubbling up the event chain and execute the inner most element event and then stops.
+>> stopPropagation doesnot restrict other events in the document and they can be executed successfully.
+
+event.stopImmediatePropogation:
+the stopImmediatePropagation event executes first event handler and stops the rest of the event handler from being executed.
+>> it doesnot allow other events to trigger in the document.

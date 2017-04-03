@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style>
+div
+{
+  background-color: skyblue;
+  border-color: green;
+  border:2 px solid;
+}
+p{
+ background-color: #51D555 ;
+
+}
+span
+{
+  background-color: #9236E2;
+
+}
+</style>
+<body>
+<div id = "d1">
+this is a div element.
+<p id = "p1"> this is a paragraph in div element <br>
+<span id = "s1"> this is a span element in paragraph, in div element
+</span>
+</p>
+
+</div>
+<script>
+document.getElementById("s1").addEventListener("click", function() {
+         event.stopPropagation(); // if we use  this tag when we click on span tag then we get span popup only and other events are allowed to trigger.
+             alert("you clicked Span element");
+            },false);
+
+//event.stopImmediatePropogation();
+// if we use this tag then only span popup works and other events are not allowed to trigger.
+
+document.getElementById("p1").addEventListener("click",function(){
+              alert("you clicked paragraph element");
+            },false);
+
+document.getElementById("d1").addEventListener("click",function(){
+              alert("you clicked div element");
+            },false);
+
+
+</script>
+</body>
+</html>

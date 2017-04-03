@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style>
+div
+{
+  background-color: skyblue;
+  border-color: green;
+  border:2 px solid;
+}
+</style>
+<body>
+<div id = "d1">
+
+<p id = "p1">
+ <b>Event Bubbling</b>
+ In this first inner most element event handles first and then the outter most element event handles.
+</p>
+</div>
+
+<div id = "d2">
+
+<p id = "p2">
+ <b>Event Capturing</b>
+ In this first the outter most element events are  handles and then the inner element events are handled. </p>
+</div>
+
+<script>
+document.getElementById("p1").addEventListener("click", function() {
+             alert("you clicked paragragh element");
+            },false);
+
+document.getElementById("d1").addEventListener("click",function(){
+              alert("you clicked DIV element");
+            },false);
+
+document.getElementById("p2").addEventListener("click",function(){
+              alert("you clicked paragraph element");
+            },true);
+
+document.getElementById("d2").addEventListener("click",function(){
+              alert("you clicked DIV element");
+            },true);
+
+</script>
+</body>
+</html>
