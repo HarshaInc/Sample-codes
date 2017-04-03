@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<h1>Jquery</h1>
+<div>
+<h3>What is Jquery?</h3>
+<p id = "p1">JQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+</p>
+</div>
+
+<form action ="">
+Name: <input type ="text" name="user"><br>
+Password: <input type ="password" name="password"><br>
+<span>
+sex: male:<input type ="radio" id="male" name="sex" value="m">
+     female<input type="radio" id="female" name="sex" value="f">
+</span><br>
+I have a car <input type ="checkbox" name="car" value="c"><br>
+I have a mobile <input type = "checkbox" name = "mobile" value="p"><br>
+I have a house <input type ="checkbox" name= "home" value="h"><br>
+<br>
+country:
+          <select id="country">
+          <option value="http://www.worldpress.org/images/maps/world_600w.gif" > select a country</option>
+          <option value="http://www.drodd.com/images15/map-of-india2.png" id ="s1"> India</option>
+          <div >
+          </div>
+          <option value="http://geology.com/world/the-united-states-of-america-map.gif" id ="s2"> America </option>
+          <option value="http://www.emapsworld.com/images/canada-political-map.gif" id = "s3"> Canada</option>
+          <option value="http://australiamap.facts.co/australiamapof/AustraliaMap.png" id = "s4">Australia</option>
+          <option value="http://www.drodd.com/images15/map-of-england13.gif" id ="s5">England</option>
+          </select> <br><br>
+
+<img name="image" src="http://www.worldpress.org/images/maps/world_600w.gif" alt="image" width="400" height=300"><br><br>
+
+<input type ="submit" value="submit"><br><br>
+Enter your info:<input type = "text"/>
+</form>
+
+<table>
+<thead> <b>JQuery Features</b>
+</thead>
+<tbody>
+<tr>
+<td>DOM Manipulation </td>
+<td>
+The jQuery made it easy to select DOM elements, traverse them and modifying their content by using cross-browser open source selector engine called Sizzle.
+</td>
+</tr>
+<tr>
+<td>Event handling </td>
+<td>
+The jQuery offers an elegant way to capture a wide variety of events, such as a user clicking on a link, without the need to clutter the HTML code itself with event handlers.
+</td>
+</tr>
+<tr>
+<td>AJAX Support</td>
+<td>The jQuery helps you a lot to develop a responsive and feature-rich site using AJAX technology.</td>
+</tr>
+<tr>
+<td>Animations</td>
+<td>The jQuery comes with plenty of built-in animation effects which you can use in your websites.
+</td>
+</tr>
+<tr>
+<td>Lightweight</td>
+<td>The jQuery is very lightweight library - about 19KB in size ( Minified and gzipped ).</td>
+</tr>
+</tbody>
+</table>
+
+<div>
+<h3>How to use jQuery?</h3>
+<ul>There are two ways of using jQuery.
+<li>Local Installation -You can download jQuery library on your local machine and include it in your HTML code.
+</li>
+<li>CDN Based Version - You can include jQuery library into your HTML code directly from Content Delivery Network (CDN).
+</li>
+</ul>
+</div>
+<div>
+<h3>How to call a jQuery library functions?</h3>
+<p class = "c1">As almost everything we do when using jQuery reads or manipulates the document object model (DOM), we need to make sure that we start adding events etc. as soon as the DOM is ready.</p>
+<p class = "c2">If you want an event to work on your page, you should call it inside the $(document).ready() function. Everything inside it will load as soon as the DOM is loaded and before the page contents are loaded.</p>
+</div>
+
+<div>
+<h3>Built-in Functions</h3>
+<table>
+<thead> <b>Methods And Description</b>
+</thead>
+<tbody>
+<tr>
+<td>charAt() </td>
+<td>Returns the character at the specified index.</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td>Combines the text of two strings and returns a new string.</td>
+</tr>
+<tr>
+<td>forEach()</td>
+<td>Calls a function for each element in the array.</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.
+</td>
+</tr>
+<tr>
+<td>length()</td>
+<td>Returns the length of the string.</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>Removes the last element from an array and returns that element.</td>
+</tr>
+<tr>
+<td> push()</td>
+<td>Adds one or more elements to the end of an array and returns the new length of the array.</td>
+</tr>
+<tr>
+<td> reverse()</td>
+<td>Reverses the order of the elements of an array -- the first becomes the last, and the last becomes the first.</td>
+</tr>
+<tr>
+<td> sort()</td>
+<td>Sorts the elements of an array.</td>
+</tr>
+<tr>
+<td> substr()</td>
+<td>Returns the characters in a string beginning at the specified location through the specified number of characters.</td>
+</tr>
+<tr>
+<td>toLowerCase()</td>
+<td>Returns the calling string value converted to lower case.</td>
+</tr>
+<tr>
+<td>
+toString()</td>
+<td>Returns the string representation of the number's value.</td>
+</tr>
+<tr>
+<td>toUpperCase()</td>
+<td>Returns the calling string value converted to uppercase.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="c3">The jQuery library harnesses the power of Cascading Style Sheets (CSS) selectors to let us quickly and easily access elements or groups of elements in the Document Object Model (DOM).</p>
+
+<p>A jQuery Selector is a function which makes use of expressions to find out matching elements from a DOM based on the given criteria. Simply you can say, selectors are used to select one or more HTML elements using jQuery. Once an element is selected then we can perform various operations on that selected element.</p>
+<h3>The $() factory function</h3>
+<p class="c4">The factory function $() is a synonym of jQuery() function. So in case you are using any other JavaScript library where $ sign is conflicting with some thing else then you can replace $ sign by jQuery name and you can use function jQuery() instead of $().</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+    $("*").css("background-color", "#CBF7E9");
+    $("p").css("color", "green");
+    $("#p1").css("color", "#144DEC");
+    $(".c1").css("color", "blue");
+    $(".c3,.c4").css("color", "#EC8714");
+    $("tr td").css("background-color","#EFD365");
+    $("table","td" ).css("border","1px","black")
+    $("p:first").css("font-weight", "bold");
+    $("p:last").css("font-style", "italic");
+    $("tr:even").css("color","green");
+    $("tr:odd").css("color","red");
+    $("div: first-child").css("border","20px");
+});
+
+$(document).ready(function()
+{
+  $("input").focus();
+  $(":input").css("background-color","orange");
+  $(":text").css("background-color","#65EF69");
+  $(":selected").css("background-color","#22E1D4")
+  $("#male").attr("checked","checked");
+  $(":radio").wrap("<span style='background-color:#3731EE'>")
+  $(":checkbox").wrap("<span style='background-color:#31EE37'>");
+ $("#country").change(function () {
+    $("img[name=image]").attr("src",$(this).val());
+    });
+});
+
+</script>
+</body>
+</html>
