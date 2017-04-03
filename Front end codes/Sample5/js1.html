@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+            DOM elements and Events in Javascript.
+  </title>
+<link href="js1.css" rel="stylesheet"/>
+</head>
+<body>
+      <p>JavaScript can change HTML attributes.</p>
+      <p>In this case JavaScript will blow a bulb.</p>
+
+       <button onclick="document.getElementById('myImage').src='http://srednjeskole.edukacija.rs/wp-content/uploads/2014/11/ideja.png'"">Turn on the light</button>
+
+        <img id="myImage" src="http://creebulb.com/media/catalog/product/cache/1/bulb_off_image/450x/9df78eab33525d08d6e5fb8d27136e95/c/r/cree-connected-60-watt-soft-white-off-image.png " style="width:100px">
+
+        <button onclick="document.getElementById('myImage').src= 'http://creebulb.com/media/catalog/product/cache/1/bulb_off_image/450x/9df78eab33525d08d6e5fb8d27136e95/c/r/cree-connected-60-watt-soft-white-off-image.png'"">Turn off the light</button>
+
+          <p>Bring your mouse inside the division to see the result:</p>
+
+      <div  onmouseover="over()" onmouseout="out()">
+         <h2> This is a Danger Zone </h2>
+      </div>
+
+      <form method="POST" name="form1" onsubmit="return validation();">
+          <p>Click the following button and see result</p>
+          <p> <input type="button" onclick="sayHello()" value="Say Hello" /></p><br><br>
+          <p>Name:<input type="text" name="Name" size="35"></p>
+          <p>Last Name:<input type=text" name="LastName" id="lname" onblur="myfunc()" size="35"></p>
+          <p>Address:<input type="textarea" name="Address" onfocus="focusfunction(this)"></p>
+           <input type="submit" value="Submit" />
+      </form>
+       <p><b>variables declaration and definitions</b></p>
+
+        <div>
+             <p> DataTypes</p>
+             <p> If statement </p> <p id ="1">result</p>
+             <p>While Loop </p> <p id ="2">result</p>
+             <p>Switch case statement </p><p id ="3">result</p>
+             <p>Do While Loop </p><p id ="4">result</p>
+             <p>For in Loop </p><p id ="5">result</p>
+             <p>For Loop</p><p id ="6">result</p>
+       </div>
+      <script>
+        function myfunc()
+                 {
+                            var l = document.getElementById("lname");
+                            l.value= l.value.toUpperCase();
+
+                  }
+            function sayHello()
+            {
+               alert("Hello World");
+            }
+             function over()
+             {
+               document.write ("This is a Mouse Over Event,please refresh the page.");
+            }
+
+            function out()
+            {
+               document.write ("This is a Mouse Out Event");
+            }
+            function validation()
+             {
+               var name = document.form1.Name;
+
+               if(name.value =="")
+               {
+                  window.alert("please enter your name.");
+                  name.focus();
+                   return false;
+               }
+               return true;
+             }
+           function focusfunction(t)
+                  {
+                    t.style.background = "green";
+                  }
+
+                  var a;
+                   document.write("value of a = " + a+"<br>");
+
+                  a = 20;
+                  document.write("value of a = " + a+"<br>");
+                  a = "hello World";
+                  document.write("value of a = " + a+"<br>");
+                  a = true;
+                   document.write("value of a = " + a+"<br>");
+                   a = {};
+                   document.write("value of a = " + a+"<br>");
+                   a = [20,30,40];
+                   document.write("value of a = " + a+"<br>");
+                   a = fact();
+                  document.write("value of a = " + a+"<br>");
+                   function fact(){
+                                      a = 20.5;
+                                      b = 40;
+                                      c = a*b;
+                                      return c;
+                                 };
+      </script>
+
+      <script>
+                var i = 30,text;
+                if(i< 10)
+                 {
+                  text = "less than 10";
+                }
+                else
+                {
+                text = "greater than 10";
+                }
+                document.getElementById("1").innerHTML = text;
+      </script>
+
+             <script>
+                    var r = 0,test2;
+                    while(r<14)
+                    {
+                        r++;
+                        text2 = r+' ';
+                        document.getElementById("2").innerHTML = text2;
+                    }
+             </script>
+
+             <script>
+                                var n ='44';
+                                switch(n)
+                                {
+                                  case '11':
+                                  document.getElementById("3").innerHTML="eleven";
+                                  break;
+                                  case '22':
+                                   document.getElementById("3").innerHTML="twenty two";
+                                  break;
+                                  case '33':
+                                  document.getElementById("3").innerHTML="thirty three";
+                                  break;
+                                  case '44':
+                                 document.getElementById("3").innerHTML="Forty four";
+                                  break;
+                                  default:
+                                 document.getElementById("3").innerHTML="Any Number";
+                                }
+               </script>
+
+                   <script>
+                               var j = 10,text3;
+                               do
+                                {
+                                   j--;
+                                  text3 = j+' ';
+                                  document.getElementById("4").innerHTML = text3;
+                                }while(j>10);
+                      </script>
+
+                        <script>
+                                 var emp = {name:"harsha",age:25, company:"harshaInc"};
+                                 var company = " ";
+                                 var p,text4;
+                                 for (var p in emp)
+                                  {
+                                    company = company + emp[p];
+                                     text4 = company;
+                                     document.getElementById("5").innerHTML = text4;
+                                 }
+                       </script>
+
+                       <script>
+                                var k,text5;
+                              for(k = 1; k< 20; k++)
+                                {
+                                   text5 = k+' ';
+                                document.getElementById("6").innerHTML = text5;
+                                }
+                      </script>
+</body>
+</html>
+
+

@@ -1,0 +1,173 @@
+1) why we use java script?
+2) what is dom manipulation?
+3) what are events in a web page? how can you recognize them
+4) java script data types.
+5) conditions and loops
+6) diff null and undefined
+7) loop (for, while and do while) and conditons (if else, switch).
+
+
+1.Use of JavaScript
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>>> The main purpose of JavaScript is to make things happen in the user browser itself without sending to the server.
+
+>>> We can validate field by field rather than waiting until user has completely filled out the screen and click the submit button.
+>>> Javascript adds behaviour to the web page where it is capable of responding to actions by your visitors without needing to load a new page.
+
+>>>Javascript code is less and it works more.
+
+>>> JavaScript saves time,you need not code all the pages in html we can reuse the html and Dhtml code by writing javaScript code.
+
+
+2.DOM Manipulation:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+DOM: DOM is a document Object Model is a programming interface for HTML and XML documents.
+
+Dom manipulations change the attributes of an element,sets elements style properties, modifies entire elements, these all refers to as setters as they change the values of properties.
+
+3.Events in javascript:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+there are many events in javascripts
+they are
+onsubmit:
+this event triggers when a form is submitted.
+onchange:
+to change the html element we use onchange event.
+
+onclick
+to perform some operation,when a user clicks the particular html element.
+
+onmouseover
+to perform some action when a user moves over an html element.
+
+onmouseout
+to perform some action when a user moves away from an html elemnent.
+
+onkeydown
+to perform an action when a keyboard key is pressed.
+
+onload
+this event triggers when document is loaded.
+
+onblur:
+this event triggers when window loses focus.
+
+oncontextmenu:
+this is event triggers when user calls the context menu by right clicking.
+
+onselect:
+this event triggers when an element is selected.
+
+onsuspend:
+this event is triggered when the browser fetching media data but stopped before it is completely loaded into the browser.
+
+onscroll:
+this event is triggered when scrollbar is being sscrolled in a page.
+
+onresize:
+this event triggers when window is resized.
+
+onfocus:
+this event triggers when window is focused.
+
+onstorage:
+this event triggers when a document loads
+
+4.JAvaScript DataTypes:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+there are 2 different datatypes in javascript:
+1.primitive datatypes
+2.Non primitive datatypes
+
+
+1.primitive data types
+Boolean
+== Boolean represents values either true or false.
+
+Undefined
+== Undefined represents undefined value.
+
+Number
+== Number represents numerical values.
+
+String:
+== String represents sequence of character elements
+
+Null
+== represents NUll value.
+
+Non-primitive data types:
+Object:
+== represents an instance through which we can access members.
+Array:
+== Array represents group of homogenous elements.
+
+function
+== return a value when it is called by any element.
+
+6.Difference between Null and Undefined:
++++++++++++++++++++++++++++++++++++++++++++++
+
+Null is an assigned value to a variable to represent no value to the variable. Null is defined to a variable as an empty value intentionally.Null is an object
+
+Undefined is declared to a variable but not assigned any value.It is a type by default.
+
+
+5.Conditions and Loops:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Loops:
+========
+
+there are different loops in javascript,
+
+>> we use loops when we want to run the same code again and again by different possibilities.
+
+1.for loop:
+=============
+
+>> in for loop we can declare a variable,initialize a variable,and increment them.
+>>we can write the logic within the for loop and it executes until the specific condition is satisfied.
+
+2.for in loop:
+===============
+
+>> we can acquire properties of specific group or an object elements in to the loop and execute for elements in the given object.
+
+3.while Loop
+===============
+>>while loop executes the code until the condition is true.
+
+4.Do while Loop
+================
+>>Do while loop executes the block of code before checking the condition and it stops until the condition is true.
+
+Conditions in javascript:
+================================
+
+1.if else
+In if else, if block executes iff if condition is true and if-condition is false then it executes the else block.
+
+2.else if
+If we want to execute multiple if conditions we use else-if statements.
+if one condition fails then it checks the else-if statement and if that statement too is false then it executes else block.
+
+3.switch
+ switch case selects one among many cases,in this we pass an expression and it compares this expression with every case and executes the result.
+
+
+References:
+http://javascript.about.com/od/reference/a/javascriptpurpose.htm
+https://davidwalsh.name/6-reasons-to-use-javascript-libraries-frameworks
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+https://api.jquery.com/category/manipulation/
+
+
+
+
+
+
+
+
