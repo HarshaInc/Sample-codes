@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<h3>Addition</h3>
+<p> Addition of three values </p>
+<button id = "Add">ADD</button>
+
+<h3>Substration</h3>
+<p> Substract of three values </p>
+<button id = "Sub">SUBSTRACTION</button>
+
+<h3>Multiplication</h3>
+<p> Multiply of three values </p>
+<button id = "Mul">MULTIPLICATION</button>
+
+<script>
+ document.getElementById("Add").addEventListener("click",
+       function()
+       {
+
+
+        var a = prompt("enter first value");
+        var b = prompt("enter second value");
+        var c = prompt("enter third value");
+
+        var a = parseInt(a);
+        var b = parseInt(b);
+        var c = parseInt(c);
+        alert(a+b+c);
+       }
+  );
+ document.getElementById("Sub").addEventListener("mouseover",
+       function()
+       {
+
+
+        var a = prompt("enter first value");
+        var b = prompt("enter second value");
+        var c = prompt("enter third value");
+
+        var a = parseInt(a);
+        var b = parseInt(b);
+        var c = parseInt(c);
+        alert(a-b-c);
+       }
+  );
+
+document.getElementById("Mul").addEventListener("mouseout",
+       function()
+       {
+
+
+        var a = prompt("enter first value");
+        var b = prompt("enter second value");
+        var c = prompt("enter third value");
+
+        var a = parseInt(a);
+        var b = parseInt(b);
+        var c = parseInt(c);
+        alert(a*b*c);
+       }
+  );
+
+</script>
+
+
+</body>
+</html>

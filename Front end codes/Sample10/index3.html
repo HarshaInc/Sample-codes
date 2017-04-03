@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h3> JavaScript Selectors</h3>
+<div class = "sel"> The Selectors API provides methods that make it quick and easy to retrieve Element nodes from the DOM by matching against a set of selectors. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.</div>
+
+
+<h3> Selectors </h3>
+<div class ="sel">The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (p) elements in a document whose CSS class is either warning or note,
+</div>
+<button onclick="addColorToSelect()">click me to change color</button>
+
+<p class = "sample"> please click the link to view the hidden data </p>
+
+<button onclick ="modify()">link</button>
+<script>
+
+function addColorToSelect()
+{
+  var change = document.getElementsByClassName("sel");
+  change[0].style.color = "#E4306C"
+   change[1].style.color = "#DBD636"
+}
+
+function modify()
+{
+  var change = document.getElementsByClassName("sample");
+  change[0].innerHTML = "JavaScript";
+}
+</script>
+</body>
+</html>

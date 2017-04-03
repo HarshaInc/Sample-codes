@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<h3> JavaScript Selectors </h3>
+<p> The Selectors API provides methods that make it quick and easy to retrieve Element nodes from the DOM by matching against a set of selectors. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find. </p>
+
+<button onclick="countWords()">click me to know number of words in the paragraph</button>
+
+<h3> Selectors </h3>
+<p>The selector methods accept one or more comma-separated selectors to determine what element or elements should be returned. For example, to select all paragraph (p) elements in a document whose CSS class is either warning or note, </p>
+
+<button onclick="addColor()">click me to know number of words in the paragraph</button>
+
+<script>
+
+function countWords()
+{
+  var paragraphs = document.getElementsByTagName("p");
+  var count = 0;
+  for(var i = 0; i < paragraphs.length; i++)
+    {
+
+        count += paragraphs[i].innerHTML.split(' ').length;
+    }
+
+  document.write("Number of words: " + count);
+}
+
+function addColor()
+{
+  var paragraphs = document.getElementsByTagName("p");
+  for(var i = 0; i < paragraphs.length; i++)
+    {
+
+        paragraphs[i].style.backgroundColor = " #FFC300";
+    }
+}
+</script>
+
+</body>
+</html>

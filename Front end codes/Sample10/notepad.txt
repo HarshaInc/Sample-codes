@@ -1,0 +1,55 @@
+1) Practice all the selectors
+    document.getElementsByTagName
+    document.getElementById
+    document.getElementsByClassName
+    document.querySelectorAll
+
+2) event listener .addEventListener,
+
+
+
+
+1))
+ ** document.getElementsByTagName:
+
+ >> this selector is used to return html collection of elements with the given tag name.
+ >> the getElementByTagName method is case-insensitive in html.
+ >>the returned html collection is live inwhich it updates itself automatically to stay in sync with DOM elements.
+
+** document.getElementById:
+>> this selector is used to return the element that has the id attribute with specific value.
+>> to manipulate a single DOM element we use this selector with specifing an id to that element.
+>> Id can be used to refer or identify the element.
+
+**document.getElementsByClassName:
+>> returns an array like objects of all child elements which have all of the given class names
+>> u can call getElementByClassName() on any element not only on a document
+>> elements is  live HTML collection of found elements.
+
+** document.querySelectorAll
+>> it returns all the elements in the document with specific query selector
+>> this querySelectorAll returns the elements in the document that matches a specified css selector
+>> it is a non live HTML collection of found elements
+
+** document.querySelector
+>> it returns the first element in the document with the specific class selector
+
+
+2))event listener .addEventListener,
+
+ >> the addEventListener() method attaches an event handler to a specific element.
+ >> it attaches the event handler to an element without overwriting existing event handlers.
+ >> we can add event handler to the document or to the DOM elements.
+ >> we can use different events like mouseover,mouseout,onclick, onkeydown.
+
+
+
+
+
+
+
+
+ references:
+https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName
+http://help.dottoro.com/ljibxacv.php
+http://www.w3schools.com/jsref/met_document_getelementsbytagname.asp
