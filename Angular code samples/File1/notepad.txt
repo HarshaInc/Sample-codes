@@ -1,0 +1,48 @@
+Angular js 
+
+>> client side js framework
+>> Developed and being maintained by google
+>> goals :
+    >> Separate DOM manipulation from application logic(business logic)
+    >> separation of concerns (using MVC like pattern)
+     rest web services taken care by controller and that fetch to the model and model will present data to view 
+    >> Make SPA development easier.
+    >> Provide solid foundation for robust/enterprise -scale js client side applications.
+    (almost compete with server side)
+    >> Extensibility & customization 
+
+
+Make angularjs available to web page 
+
+
+>> download/refer "anguar-version-x.js" on your page
+
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+Creating angular module 
+
+angular.module("sample",[]);
+>> all application logic under one umberella
+>> if second parameter it specifies that we are creating a new module
+>> if not provided we are accessing existing module
+>> empty [] indicates there are no dependencies
+
+>>  decoratean element using ng-app and attach to module
+EX:
+<body ng-app="sample">
+sum {{3+4}}
+</body>
+
+>> ng-app it is the root of angular application 
+>> usually one ng-app per web page 
+multiple ng-app can also be used 
+>> can be attached to any html element 
+>> ng-app is associated to an angular module called "root module"
+
+use angular Expression to test angular js
+
+like 
+<body ng-app= "">
+sum of 1 + 3 is {{1+3}}
+</body>
+

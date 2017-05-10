@@ -1,0 +1,69 @@
+High level Overview Angular Process
+ 
+ >> Angularjs is included and executed 
+ >> Angularjs module gets created (if added )
+ >> finds templates 
+    >> Templates -- Html with some angular markup
+             >> ng- attributes (directives)
+             >> evaluating expressions 
+             >> data binding markups 
+
+    EX: <body ng-app ="sample">
+		    sum of 1 + 2 is {{1+2}}
+		    </body>
+
+
+ >> Processes Template
+   >> compiles template( for errors)
+   >> loads templates (instance) in to the memory 
+   >> transforms template with data 
+     >> data binding 
+     >> Evaluation of expressions 
+   >> by this these template can be understandable by the browser and can be presented to view 
+   >> angularjs works with the template and renders the output to DOM and can be viewe din the browser
+
+
+Controller:
+ >> controllers are Javascript objects which contains application logic 
+ >> usually defined as a part of angular module
+ >> 
+
+ EX: 
+<script>
+ var sample = angular.module("sample",[]);
+ sample.controller("emp",function()
+ {
+ this.Name= "harsha";
+ });
+ </script>
+<body ng-app="sample">
+<div ng-controller= "emp as o">
+// controller emp is instantiated by o 
+Hello {{o.Name}}
+</div>
+</body>
+
+>> controllers allow us to send/receive data between DOM (say views) and application logic
+>> Usually attached to DOM element using ng-controller attribute(directive)
+  >> gets instantiated 
+
+>> In other words exposes data(Model) to be consumed by views (one-way data binding)
+>> if it also sends and takes data from the views (two-way data binding)
+
+
+                           Module 
+        _______________  controller<< model____
+       |                                      |
+   web services                               | 
+       |                                    Markup 
+       |                                       view 1
+       databases                               view 2
+
+
+
+
+
+
+
+
+

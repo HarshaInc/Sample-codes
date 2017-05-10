@@ -1,0 +1,97 @@
+Scope 
+-- its relationship with the Controller
+
+
+Module 
+|_ controller
+|
+
+
+<body ng-app = "sample">
+
+<div ng-app = "emp">   // creates a Memory area 
+.....                       name : harsha
+</div>                       sal : 5000
+
+</body>
+
+>> this memory area can be obtained in the form of JSON or XML format and these data can be reside under the DOM and attached to the particular block element, this context is called the scope 
+>> this entire scope is hidden to the user interface, it is stored in the memory but not shown to the user 
+
+>> Relation btwn the scope and the controller 
+>> when u create a controller emp, create a controller instances along with the scope being merged 
+
+>> the module has control over the controller but not on the controller instance but when ever the angularjs finds any directive (ng-controller) with the same name of the controller and this controller instance has somehow access to the scope. 
+>> angular knows when the controller instantiates it not asking the controller instancce instead it is asking the scope being merged in to the controller instance.
+ie controller has direct access to the scope and the template also has the direct access to the scope 
+
+>> scope is acting as a glue between the template(view) and the controller 
+>> scope is a mediator or transformer between the view and the controller
+>> if controller wants to sends controller instance or any information to view it sends through scope and similarly if view wants to send information to the controller it sends to through view.
+
+>> during expression evaluation if any particular expression is not available in the scope then it will not return error insteadit just skips it.
+
+>> Scope acts as a data funding elements for all of those expression evaluation and the data binding.
+
+
+Using Scope inside the controller 
+
+EX:
+<script>
+
+var sample = angular.module("sample" , []);
+	
+	sample.controller("emp",function($scope){<<_____
+         $scope.Name = "harsha";                    |
+	});           |                                 |
+                  |________________                 |
+</script>                         |
+                                  |____________>> scope
+<body ng-app= "sample" ng-controller= "emp">   name:Harsha
+Hello {{Name}}                                      |
+</body> <<|_________________________________________|
+
+
+>> working with $scope object in controller 
+>> accessing scope in console ( for debugging/testing)
+>> scope gets initiated by the name values 
+>> to access scope of the particular element in the console we specify $0 by selecting the element within the browser
+>> angular.element($0) to get angular version of the element
+we can get the angular version of the scope of particular element by selecting the element and using 
+angular.element($0).scope(); in the console.
+
+
+>> to get the scope variable of particular element select the element and type 
+angular.element($0).scope().sal;
+for the sal value within in the scope in the console
+similarly
+angular.element($0).scope().name;
+
+we can also modify the scope values within the console using 
+angular.element($0).scope().sal= 7000;
+
+>> inorder to propagate entire scope object back to your DOM we need to call digest on the scope itself
+angular.element($0).scope().$digest();
+
+
+Hybrid approach:
+
+<script type="text/javascript">
+		var app = angular.module("sample",[]);
+		app.controller("emp",["$scope",function($scope)
+		{
+		    $scope.o = this;
+			this.Name = "harsha"; //this is controller 
+			this.sal = 40000;
+		});
+	</script>
+
+</head>
+<body ng-app = "sample">
+  <div ng-controller = "emp as o"> <!-- o is instance of controller  -->
+     Name of Employer is {{o.Name}}
+     looks like you are earning {{o.sal}} as your salary.
+  </div>
+</body>
+
+

@@ -1,0 +1,112 @@
+Root scope
++++++++++++++++++++
+
+
+Module/ controller
+=================
+
+var sample = angular.module("sample",[]);
+
+sample.controller("emp",[$scope",function($scope){
+	$scope.Name = "harsha";
+}]);
+
+sample.controller("empDetails",[$scope", function($scope){
+	$scope.sal = 5400;
+	$scope.dept = "sales";
+}]);
+
+			Module
+			|-- controller(emp)
+			|-- controller(empDetails)
+			|
+
+view 
+=====
+<body ng-app = "sample">
+<div ng-controller= "emp">
+Details of <strong{{Name}}</strong>
+
+    <div ng-controller="empDetails">
+    {{Name}} earns {{sal}} and works in {{dept}} department.
+    </div>
+</div>
+</body>    
+
+
+>>> root scope : the scope which makes itself available at ng-app level is called as root scope.
+
+>> root scope associated to the module.
+
+>>  root scope 
+      |
+      scope of emp 
+          |
+          scope of empDetails
+          |
+      |    
+>> here tax percent = 30 available to the child scope and inner nested scope.
+
+            Tax percent = 30 ----        root scope
+                                |
+                                |
+                 Name = Harsha  + ---    emp scope
+                           |        |
+                           |        |
+                           +        +
+                      sal = 5400;        empDetails scope
+                      dept = sales               
+
+
+>> root scope can have n number of scopes within the scope
+those particular members in the root scope can be available within all the scopes regardless of the parent child scopes and nested scopes 
+
+>> if you affect the member of the root scope in any scope within the root scope then the changes are immediately reflected on the root scope.
+
+     ----- >> Tax percent = 30 ----       root scope
+     |           updated    50;   |
+     |                            |
+     |            Name = Harsha   +---    emp scope
+     |                      |        |
+     |                      |        |
+     |                      +        +
+     |                sal = 5400;        empDetails scope
+     |                 dept = sales 
+     ----------------Tax percent = 50;
+
+
+>> it is not copying the value to the root scope but you are refering the same value n number of times, once the main value is modified then all the refered values are automatically modified  
+
+>> for sharing the data we shouldn't use the root scope instead we need to use the factory or services. It is the bad practice to use root scope for sharing the member values.
+
+
+Accessing Root Scope in the controller 
+=================================
+
+Ex:
+
+sample.controller("empPayBack",["$scope",function($scope){
+	$scope.getTaxes = function()
+	{
+	return $scope.sal * 30/100;
+	};
+	$scope.getNet = function()
+	{
+	return $scope.sal - $scope.getTaxes();
+	};
+}]);
+
+here the Tax percent is available in the root scope. 
+
+sample.controller("empPayCheck",["$scope","$rootScope", function ($scope,$rootScope){
+	$scope.getTaxes= function()
+	{
+	return $scope.sal * $rootScope.TaxPercent/100;
+	};
+	$scope.getNet = function()
+	{
+	return $scope.sal - $scope.getTaxes();
+	}; 
+}]);
+
+

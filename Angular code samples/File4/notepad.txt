@@ -1,0 +1,45 @@
+Using scope Inheritance
++++++++++++++++++++++++++++++
+
+Module/Controller
+=================
+
+var sample = angular.module("sample",[]);
+
+sample.controller("emp",[$scope", function($scope){
+	$scope.Name= "harsha";
+
+}]);                                          
+sample.controller("empdetails",["$scope",     function($scope){
+	$scope.sal = 4000;
+	$scope.dept = "sales";
+}]);
+
+
+module 
+ |-- controller(emp)
+ |-- controller(empDetails)
+ |
+
+view 
+====
+
+<body ng-app = "sample">
+<div ng-controller = "emp">
+Details of <strong> {{Name}} </strong>;
+<div ng-controller= "empDetails">
+{{Name}} earns {{sal}} and works in {{dept}} Department.
+</div>
+</div>
+</body>
+
+
+>> for empDetails a new scope object is created inside the emp scope called nested scope 
+>> we can have multi level scopes and all the scopes can be nested 
+>> all those members that are available in the outer scope will be available within the inner scope.
+>> the inner scope contains not only their members but also the outer scope members within the inner scope.
+>> the top priority is the current scope, if some thing is not found in the current scope switch to parent scope if it is not available skip to the parent most, if all the parent scope doesn't have the member it simply ignores
+>> if any of the parent has the member it takes the most recent one 
+
+
+

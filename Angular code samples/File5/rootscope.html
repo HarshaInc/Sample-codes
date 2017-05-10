@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Root scope </title>
+	</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+	<script type="text/javascript">
+
+	var sample = angular.module("sample",[]).run(["$rootScope",function($rootScope){
+	   $rootScope.TaxPercent = 40; // if commented will get NaN values 
+	   
+	}]);
+
+	sample.controller("emp",["$scope",function($scope){
+		$scope.Name= "harsha";
+
+	}]);
+
+     sample.controller("empDetails",["$scope", function($scope){
+     	$scope.sal = 5400;
+     	$scope.dept = "sales";
+     }]);
+
+     sample.controller("empPayCheck",["$scope","$rootScope", function ($scope, $rootScope){
+		$scope.getTaxes= function(){
+		return $scope.sal * $rootScope.TaxPercent/100;
+		};
+		$scope.getNet = function(){
+		return $scope.sal - $scope.getTaxes();
+		}; 
+	     }]);
+
+	</script>
+</head>
+<body ng-app = "sample">
+<div ng-controller= "emp">
+Details of the Employer <strong>{{Name}}</strong>:
+	<div ng-controller= "empDetails">
+	 {{Name}} earns {{sal}} and works in {{dept}} department.
+	 <div ng-controller =  "empPayCheck">
+	   Taxes :{{getTaxes()}}<br>
+	   Net: {{getNet()}}
+	</div>
+	</div>
+</div>	
+</body>
+</html>

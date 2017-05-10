@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope Inheritance</title>
+	</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+	<script type="text/javascript">
+
+	var sample = angular.module("sample",[]);
+
+	sample.controller("emp", ["$scope", function($scope){
+		$scope.Name= "harsha";
+
+	}]);
+
+	sample.controller("empDetails",["$scope",function($scope){
+		$scope.sal = 5040;
+		$scope.dept = "sales";
+	}]);
+
+	sample.controller("empPayCheck",["$scope",function($scope){
+		$scope.getTaxes = function()
+		{
+			return $scope.sal *30/100;
+		};
+		$scope.getNet = function()
+		{
+			return $scope.sal - $scope.getTaxes();
+		};
+	}]);
+	</script>
+</head>
+<body ng-app = "sample">
+<div ng-controller= "emp">
+Employee Details of <strong>{{Name}}</strong>:
+	<div ng-controller="empDetails">
+	<strong>{{Name}}</strong> earns {{sal}} and works in {{dept}} Department.
+			<div ng-controller= "empPayCheck">
+			<strong> {{Name}} </strong> pays {{getTaxes()}} taxes and his net Income is {{getNet()}} works for {{dept}} department
+			</div>
+	</div>
+</div>
+</body>
+</html>

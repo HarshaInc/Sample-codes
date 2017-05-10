@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Different Declaration of scope</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("sample",[]);
+		app.controller("emp", ["$scope",function(c){
+			c.Name = "javascript";
+			c.sal = 4000;
+			
+		}]);
+	</script>
+<body>
+ <body ng-app = "sample" ng-controller= "emp">
+ Hello {{Name}}
+ salary is {{sal}}
+</body>
+</html> 

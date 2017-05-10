@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hybrid Scope</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript">
+
+	var app = angular.module("sample",[]);
+		app.controller("emp",["$scope",function($scope)
+		{
+		    $scope.o = this;
+			this.Name = "harsha"; //this is controller 
+			this.sal = 40000;
+		}]);
+	</script>
+<body ng-app = "sample">
+  <div ng-controller = "emp as o"> <!-- o is instance of controller  -->
+     Name of Employer is {{o.Name}}
+     looks like you are earning {{o.sal}} as your salary.
+  </div>
+</body>
+</html>

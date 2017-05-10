@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Binding </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+	<script type="text/javascript" src="twoway.js">
+	</script>
+</head>
+<body ng-app = "app">
+<div ng-controller="emp">
+  <div>
+  	value of a is {{a}} 
+    But you can change <input type= "text" ng-model= "a"/> <br>
+  	value of b is {{b}}
+   But you can change <input type= "text" ng-model= "b"/> <br>
+  </div>
+  <hr>
+  value of a is <span ng-bind = "a">values</span><br>
+  value of b is <span ng-bind = "b">values</span><br>
+   <hr>
+   Sum = {{sum}} <br>  
+  <!--  for the first time it is not executed becuase it is written in the function -->
+   <button ng-click= "doSum()">
+   Calculate </button>
+  
+</div>
+
+</body>
+</html>

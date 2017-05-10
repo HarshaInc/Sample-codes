@@ -1,0 +1,59 @@
+Data Binding 
+
+
+UI <------------->  > business logic
+                    > data/model
+
+data binding :
+  >> establish conection 
+  >> synchronized data
+
+
+AngularJS terms 
+
+>> establishing connection and synchronization between the scope/controller to the view is data binding 
+
+
+view/markup -<<----<<---<<--<<---<<----<  controller/scope
+
+
+one way binding:
+
+>> the data actually flows from the scope to the view 
+>> scope data >> all the data available in the scope is propagated to the  view.
+>> data modifications propagated immediately and reflected in view 
+>> view will be receiving continously the information from the scope and no propagation happens for any data change 
+>> usually performed through ng-bind or evaluation expressions.
+>> if scope has modifications these changes are immediately propagated to view 
+>> view will not send any information back to the scope 
+
+>> ng-bind will go into the scope and finds the variable values and present within the element.
+>> ng-bind mostly works on read-only(span,div,paragraph, header tags (h1,h2,..),italic ,bold,strong, list items)but not on input elements(checkboxes, radio buttons,...)
+
+two way data binding 
+
+view/markup-<<--->>--------<<------>>---- controller/scope
+
+>> data flows from scope to view and vice versa
+>> scope data gets propagated to view and when data modifications propagated immediately and reflected in view 
+>> view data gets propagated to scope and data modifications propagated immediately and reflected in scope
+>> usually performed through ng-model
+
+>> yhe benefit of using the ng-model instead of using ng-bind is whenever a user types any information in the text box will be automatically carried to the current scope.
+>> we can receive the information and send the data back to the scope using the ng-model.
+
+one time data binding
+======================
+
+view/markup ----------<---------- controller/scope
+
+>> only once the information is propagated from the scope to the view 
+>> when controller get instantaited and scope gets the data and that particular data only for the first time and only once it will send to the view  and if scope gets modified by some reasons then the it will not be propagated or reflected in the view.
+
+>> data flows from scope to view but only once
+>> scope data gets propagated to view only once for the first time 
+>> data modification then no propagation 
+
+>> In view data no propagation happens back to scope for any changes 
+>> usually performed through "::" as a part of evaluation expressions.
+

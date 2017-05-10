@@ -1,0 +1,52 @@
+AngularJS
+
+2) why to use angular?
+3) features of angular?
+4) differences between jQuery and AngularJs, when to use what? can both be used?
+5) what is MVC and MVVM? differences? 
+6) version you are familar, browsers you have supportd using angularJS
+7) Factory
+8) service
+9) providers, constants, varaibles
+10) controllers? when to use?
+11) Routing ? 
+12) ngRoute confuguartions, ui.router configuration
+13) ng-view
+14) common in built directives? 
+15) $scope and $rootScope
+16) filters list and custim filters created? 
+17) diff between ng-repeat and ng-options when to use what? 
+18) .config(), .run(), differnces
+19) what is single page application's(SPA's) ? how do we use them ? 
+20) what is ui-router how do you use it to create nested views, multiple views, configuration with example
+21) ng-show and ng-if differences
+22) controlerAs syntax what is the use for it
+23) $emit $on and $broadcast differences and uses
+24) controller to controler communications ways
+25) module to module communications ways
+26) directive to directive communications ways
+27) $window
+28) $interval $timeout
+29) ngCookies
+30) digest cycle? 
+31) differnces between watch, digest and apply with examples and when to use 
+32) interceptors?
+33) custom directives? all properties used?
+34) scope isolation ? and what are @, =, &
+35) transclude in custom directives
+36) what is link and compile and their differences?
+37) prelink and post link and uses in custom directives
+38) $http and $q and uses?
+39) what si $resource and restAngular how did you use them in your project?
+40) ngFocus, ngBlur, ngClick, ng.....
+41) validations in angular, ng-minlength, ng-maxlenth, ng-reuired, ng-pattern, ng-change, $valid, $invalid, $pristine, ngtouched, dirty, set validity for validations, complete form validation and showing errors?
+42) bootstrapping in angular.bootstrap(), multiplr ng-apps in a page?
+43) regsiter module, 
+44) depenedecy injection?
+45) one time databinding, one way data binding, two way data binding, 
+46) ui.bootstarp and third party angular modules used?
+47) $routeprovider and state provider and where you configure provider?
+48) what is differnces between angular expressions (ng-bind or {{}}) and java script expression and example.
+49) what do you know about angular 2.0
+50) any details about typescript or es6 with angular. 
+

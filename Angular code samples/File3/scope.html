@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("sample",[]);
+		app.controller("emp", function ($scope){
+			$scope.Name = "Angularjs";
+			$scope.sal = 5000;
+			$scope.getAnnualSal = function()
+			{
+				return (this.sal) * 12;
+			}
+		});
+		app.controller("customerInfo",["$scope",function($scope){
+			$scope.Name = "harsha";
+			$scope.city= "florida";
+		}]);
+	</script>
+</head>
+<body ng-app = "sample" ng-controller= "emp">
+   Employer Name is {{Name}}  
+   it looks like your annual Salary is {{getAnnualSal()}}
+   <div ng-controller= "customerInfo">
+   Hello ! customer {{Name}}
+   it looks like you are living in {{city}}
+   </div>
+</body>
+</html>
